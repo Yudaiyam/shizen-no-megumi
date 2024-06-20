@@ -6,9 +6,6 @@
   background: url("../img/FV.jpg") center/cover no-repeat;
   position: relative;
   z-index: 0;
-  @include mq(sp) {
-    height: 550px;
-  }
 }
 .fv__content {
   position: absolute;
@@ -21,17 +18,10 @@
   justify-content: center;
   gap: 20px;
   width: 100%;
-  @include mq(sp) {
-    flex-direction: row;
-    gap: 18px;
-  }
 }
 .fv__logo {
   width: 204px;
   flex-shrink: 0;
-  @include mq(sp) {
-    width: 72px;
-  }
 }
 .fv__catch {
   color: $primary;
@@ -40,19 +30,6 @@
   letter-spacing: 0.15em;
   line-height: 1.5;
   text-shadow: 0px 3px 3px #0000004d;
-  @media screen and (max-width: 1023px) {
-    text-align: center;
-  }
-  @include mq(sp) {
-    font-size: 25px;
-    text-shadow: none;
-  }
-}
-.fv__catch-break {
-  display: none;
-  @media screen and (max-width: 1023px) {
-    display: block;
-  }
 }
 .fv__scroll {
   display: block;
@@ -71,9 +48,6 @@
   translate: -50% 0;
   animation: infinite pop;
   animation-duration: 1s;
-  @include mq(pc) {
-    display: none;
-  }
   &:before {
     position: absolute;
     content: "";
@@ -119,44 +93,23 @@
   box-shadow: 0px 3px 6px #00000029;
   color: #fff;
   padding: 14px 15px 18px 15px;
-  @include mq(sp) {
-    width: 142px;
-    height: 76px;
-    border-radius: 10px;
-    bottom: 20px;
-    right: auto;
-    left: 20px;
-    padding: 8px 10px;
-  }
 }
 .fv__news-info {
   display: flex;
   flex-direction: column;
   gap: 18px;
   margin-bottom: 3px;
-  @include mq(sp) {
-    flex-direction: row;
-    align-items: flex-end;
-    gap: 6px;
-    margin-bottom: 6px;
-  }
 }
 .fv__news-heading {
   font-family: $font-en;
   font-size: 20px;
   letter-spacing: 0.05em;
   text-transform: capitalize;
-  @include mq(sp) {
-    font-size: 14px;
-  }
 }
 .fv__news-date {
   font-family: $font-en;
   font-size: 12px;
   letter-spacing: 0.05em;
-  @include mq(sp) {
-    font-size: 10px;
-  }
 }
 .fv__news-title {
   font-size: 16px;
@@ -167,8 +120,4 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
-  @include mq(sp) {
-    font-size: 12px;
-    -webkit-line-clamp: 2;
-  }
 }
