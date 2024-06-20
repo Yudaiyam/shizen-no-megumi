@@ -25,6 +25,9 @@
     flex-direction: row;
     gap: 18px;
   }
+  @include mq(xs) {
+    gap: 8px;
+  }
 }
 .fv__logo {
   width: 204px;
@@ -46,6 +49,9 @@
   @include mq(sp) {
     font-size: 25px;
     text-shadow: none;
+  }
+  @include mq(xs) {
+    font-size: 22px;
   }
 }
 .fv__catch-break {

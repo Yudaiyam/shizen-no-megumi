@@ -334,6 +334,11 @@ a:hover {
     gap: 18px;
   }
 }
+@media screen and (max-width: 374px) {
+  .fv__content {
+    gap: 8px;
+  }
+}
 
 .fv__logo {
   width: 204px;
@@ -362,6 +367,11 @@ a:hover {
   .fv__catch {
     font-size: 25px;
     text-shadow: none;
+  }
+}
+@media screen and (max-width: 374px) {
+  .fv__catch {
+    font-size: 22px;
   }
 }
 
