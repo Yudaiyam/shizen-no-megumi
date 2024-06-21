@@ -1,0 +1,12 @@
+@use "../global" as *;
+
+.container {
+  margin-inline: auto;
+  max-width: 960px;
+  @media screen and (max-width: 990px) {
+    margin-inline: 30px;
+  }
+  @include mq(sp) {
+    margin-inline: 15px;
+  }
+}

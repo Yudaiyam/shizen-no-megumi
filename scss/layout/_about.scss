@@ -1,0 +1,78 @@
+@use "../global" as *;
+
+.about {
+  position: relative;
+  margin-bottom: 54px;
+  padding-top: 116px;
+  padding-bottom: 282px;
+  @include mq(sp) {
+    margin-bottom: 40px;
+    padding-top: 88px;
+    padding-bottom: 136px;
+  }
+}
+.about__img {
+  position: absolute;
+  &:first-of-type {
+    width: min(calc((200 / 1366) * 100vw), 200px);
+    top: 0;
+    left: 0;
+    @include mq(sp) {
+      width: 64px;
+      left: 19px;
+    }
+  }
+  &:nth-of-type(2) {
+    width: min(calc((181 / 1366) * 100vw), 181px);
+    top: 0;
+    right: 0;
+    @include mq(sp) {
+      width: 56px;
+      top: 12px;
+      right: 28px;
+    }
+  }
+  &:nth-of-type(3) {
+    width: min(calc((200 / 1366) * 100vw), 200px);
+    bottom: 68px;
+    left: 108px;
+    @include mq(sp) {
+      width: 86px;
+      bottom: 28px;
+      left: 32px;
+    }
+  }
+  &:last-of-type {
+    width: min(calc((236 / 1366) * 100vw), 236px);
+    bottom: 0;
+    right: 24px;
+    @include mq(sp) {
+      width: 108px;
+      bottom: 0;
+      right: 32px;
+    }
+  }
+}
+.about__heading {
+  width: 314px;
+  margin: 0 auto 56px;
+  @include mq(sp) {
+    width: 232px;
+    margin-bottom: 30px;
+  }
+}
+.about__text {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 2;
+  @include mq(xs) {
+    font-size: 14px;
+  }
+  & + .about__text {
+    margin-top: 24px;
+    @include mq(sp) {
+      margin-top: 36px;
+    }
+  }
+}
