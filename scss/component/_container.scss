@@ -2,7 +2,7 @@
 
 .container {
   margin-inline: auto;
-  width: min(calc((960 / 1366) * 100vw), 960px);
+  width: calc((960 / 1366) * 100vw);
   @media screen and (max-width: 990px) {
     width: auto;
     margin-inline: 30px;

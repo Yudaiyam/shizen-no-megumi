@@ -2,11 +2,11 @@
 
 .about {
   position: relative;
-  margin-bottom: 54px;
+  margin-bottom: 45px;
   padding-top: 116px;
   padding-bottom: 282px;
   @include mq(sp) {
-    margin-bottom: 40px;
+    margin-bottom: 36px;
     padding-top: 88px;
     padding-bottom: 136px;
   }
