@@ -2,8 +2,9 @@
 
 .container {
   margin-inline: auto;
-  max-width: 960px;
+  width: min(calc((960 / 1366) * 100vw), 960px);
   @media screen and (max-width: 990px) {
+    width: auto;
     margin-inline: 30px;
   }
   @include mq(sp) {

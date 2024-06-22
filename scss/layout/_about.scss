@@ -24,7 +24,7 @@
   }
   &:nth-of-type(2) {
     width: min(calc((181 / 1366) * 100vw), 181px);
-    top: 0;
+    top: 50px;
     right: 0;
     @include mq(sp) {
       width: 56px;
@@ -47,18 +47,18 @@
     bottom: 0;
     right: 24px;
     @include mq(sp) {
-      width: 108px;
-      bottom: 0;
-      right: 32px;
+      width: 98px;
+      bottom: 3px;
+      right: 43px;
     }
   }
 }
 .about__heading {
   width: 314px;
-  margin: 0 auto 56px;
+  margin: 0 auto 54px;
   @include mq(sp) {
     width: 232px;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
   }
 }
 .about__text {
@@ -67,12 +67,12 @@
   font-weight: bold;
   line-height: 2;
   @include mq(xs) {
-    font-size: 14px;
+    font-size: 13px;
   }
   & + .about__text {
-    margin-top: 24px;
+    margin-top: 14px;
     @include mq(sp) {
-      margin-top: 36px;
+      margin-top: 24px;
     }
   }
 }
