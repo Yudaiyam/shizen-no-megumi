@@ -56,10 +56,15 @@
   font-size: 16px;
   letter-spacing: 0.05em;
 }
+.top-news__article-cateogyr-wrapp {
+  display: flex;
+}
 .top-news__article-category {
   padding: 4px 28px;
   background-color: $primary;
   border-radius: 5px;
   color: #fff;
   font-size: 14px;
+}
+.top-news__article-title {
 }
