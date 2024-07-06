@@ -158,6 +158,7 @@ picture {
 }
 
 a {
+  display: block;
   text-decoration: none;
   transition: all 0.3s ease;
 }
@@ -235,6 +236,24 @@ a {
   .section__heading:before {
     top: 12px;
   }
+}
+
+.btn {
+  width: 300px;
+  height: 70px;
+  border: 2px solid #93c572;
+  border-radius: 35px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 70px;
+  color: #93c572;
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  text-transform: capitalize;
+}
+.btn-ja {
+  font-weight: bold;
 }
 
 .header {
@@ -677,6 +696,7 @@ a {
   overflow: hidden;
   display: flex;
   justify-content: flex-end;
+  background-color: #fff;
 }
 @media screen and (max-width: 1023px) {
   .introduction {
@@ -770,6 +790,15 @@ a {
 @media screen and (max-width: 767px) {
   .introduction__slide {
     width: 250px;
+  }
+}
+
+.faq {
+  margin-bottom: 120px;
+}
+@media screen and (max-width: 767px) {
+  .faq {
+    margin-bottom: 75px;
   }
 }
 
@@ -923,4 +952,83 @@ a {
 .faq__answer p {
   font-size: 20px;
   line-height: 1.35;
+}
+
+.top-news {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+@media screen and (max-width: 767px) {
+  .top-news {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.top-news__heading {
+  margin-bottom: 45px;
+}
+@media screen and (max-width: 767px) {
+  .top-news__heading {
+    margin-bottom: 32px;
+  }
+}
+
+.top-news__description {
+  font-size: 16px;
+  line-height: 1.3;
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 767px) {
+  .top-news__description {
+    margin-bottom: 0;
+  }
+}
+
+.top-news__inner {
+  width: 50vw;
+  margin-right: calc(50% - 50vw);
+  flex-shrink: 0;
+  padding: 80px 0 80px 3.6603221083vw;
+  background-color: #fff;
+  border-radius: 100px 0 0 100px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1607843137);
+}
+@media screen and (max-width: 767px) {
+  .top-news__inner {
+    width: 96.2666666667vw;
+    padding: 30px 20px;
+    border-radius: 50px 0 0 50px;
+  }
+}
+.top-news__inner li:last-child a {
+  padding-bottom: 0;
+}
+
+.top-news__article {
+  padding-bottom: 30px;
+}
+
+.top-news_article-info {
+  display: flex;
+  align-items: center;
+  gap: 12px 4px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.top-news__article-time {
+  color: #555555;
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+}
+
+.top-news__article-category {
+  padding: 4px 28px;
+  background-color: #93c572;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
 }/*# sourceMappingURL=style.css.map */

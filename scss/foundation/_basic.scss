@@ -21,6 +21,7 @@ picture {
   vertical-align: middle;
 }
 a {
+  display: block;
   text-decoration: none;
   transition: $transition;
   &:hover {

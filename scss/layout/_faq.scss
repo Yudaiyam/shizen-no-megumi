@@ -1,6 +1,10 @@
 @use "../global" as *;
 
 .faq {
+  margin-bottom: 120px;
+  @include mq(sp) {
+    margin-bottom: 75px;
+  }
 }
 .faq__heading {
   margin-inline: auto;

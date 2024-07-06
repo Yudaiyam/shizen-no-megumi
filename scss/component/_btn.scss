@@ -1,0 +1,19 @@
+@use "../global" as *;
+
+.btn {
+  width: 300px;
+  height: 70px;
+  border: 2px solid $primary;
+  border-radius: 35px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 70px;
+  color: $primary;
+  font-family: $font-en;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  text-transform: capitalize;
+  &-ja {
+    font-weight: bold;
+  }
+}
