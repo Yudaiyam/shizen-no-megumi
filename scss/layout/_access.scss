@@ -1,0 +1,42 @@
+@use "../global" as *;
+
+.access {
+  margin-bottom: 160px;
+  @include mq(sp) {
+    margin-bottom: 80px;
+  }
+}
+.access__heading {
+  margin-inline: auto;
+  margin-bottom: 45px;
+  @include mq(sp) {
+    margin-bottom: 42px;
+  }
+}
+.access__table {
+  width: 100%;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 100px;
+  overflow: hidden;
+  @include mq(sp) {
+    border-radius: 50px;
+  }
+  th {
+    width: 250px;
+    background-color: $primary;
+    color: $text-color;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 50px;
+    text-align: start;
+    &:first-child {
+      padding-top: 76px;
+    }
+    @include mq(sp) {
+      width: 140px;
+    }
+  }
+  td {
+    background-color: #fff;
+  }
+}
