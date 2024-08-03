@@ -21,6 +21,40 @@
   @include mq(sp) {
     border-radius: 50px;
   }
+  tr {
+    &:first-child {
+      th {
+        padding-top: 76px;
+      }
+    }
+    &:nth-child(n + 1):nth-child(-n + 4) {
+      td {
+        padding-left: 50px;
+      }
+    }
+    &:nth-child(n + 2):nth-child(-n + 4) {
+      th {
+        padding-top: 24px;
+      }
+    }
+    &:nth-child(4) {
+      th {
+        padding-bottom: 50px;
+      }
+      td {
+        padding-bottom: 50px;
+      }
+    }
+    &:nth-child(5) {
+      th {
+        padding-top: 20px;
+        a {
+          margin-top: 20px;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
   th {
     width: 250px;
     background-color: $primary;
@@ -29,14 +63,19 @@
     font-weight: bold;
     padding-left: 50px;
     text-align: start;
-    &:first-child {
-      padding-top: 76px;
-    }
+    vertical-align: top;
     @include mq(sp) {
       width: 140px;
     }
   }
   td {
     background-color: #fff;
+    vertical-align: bottom;
+  }
+}
+.access__gmap-wrapper {
+  height: 300px;
+  @include mq(sp) {
+    height: 250px;
   }
 }

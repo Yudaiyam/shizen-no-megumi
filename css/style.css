@@ -147,6 +147,10 @@ body {
   background-color: #f9f9f9;
 }
 
+main {
+  overflow-x: hidden;
+}
+
 img {
   width: 100%;
   height: auto;
@@ -1060,6 +1064,10 @@ a {
   font-size: 20px;
   font-weight: bold;
   line-height: 1.3;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 @media screen and (max-width: 767px) {
   .top-news__article-title {
@@ -1097,6 +1105,28 @@ a {
     border-radius: 50px;
   }
 }
+.access__table tr:first-child th {
+  padding-top: 76px;
+}
+.access__table tr:nth-child(n+1):nth-child(-n+4) td {
+  padding-left: 50px;
+}
+.access__table tr:nth-child(n+2):nth-child(-n+4) th {
+  padding-top: 24px;
+}
+.access__table tr:nth-child(4) th {
+  padding-bottom: 50px;
+}
+.access__table tr:nth-child(4) td {
+  padding-bottom: 50px;
+}
+.access__table tr:nth-child(5) th {
+  padding-top: 20px;
+}
+.access__table tr:nth-child(5) th a {
+  margin-top: 20px;
+  text-decoration: underline;
+}
 .access__table th {
   width: 250px;
   background-color: #93c572;
@@ -1105,9 +1135,7 @@ a {
   font-weight: bold;
   padding-left: 50px;
   text-align: start;
-}
-.access__table th:first-child {
-  padding-top: 76px;
+  vertical-align: top;
 }
 @media screen and (max-width: 767px) {
   .access__table th {
@@ -1116,4 +1144,14 @@ a {
 }
 .access__table td {
   background-color: #fff;
+  vertical-align: bottom;
+}
+
+.access__gmap-wrapper {
+  height: 300px;
+}
+@media screen and (max-width: 767px) {
+  .access__gmap-wrapper {
+    height: 250px;
+  }
 }/*# sourceMappingURL=style.css.map */
