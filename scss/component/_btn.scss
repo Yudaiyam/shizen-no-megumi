@@ -14,6 +14,8 @@
   letter-spacing: 0.1em;
   text-transform: capitalize;
   &-ja {
+    font-family: "Yu Gothic", "Helvetica Neue", "Helvetica", "Hiragino Sans",
+      "Hiragino Kaku Gothic ProN", "Arial", "Meiryo", sans-serif;
     font-weight: bold;
   }
 }

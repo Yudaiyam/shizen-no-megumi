@@ -10,6 +10,13 @@
       href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
@@ -287,43 +294,146 @@
       <section>
         <div class="access container" id="access">
           <h2 class="access__heading section__heading">アクセス</h2>
-          <table class="access__table">
-            <tr>
-              <th>会社名</th>
-              <td>株式会社自然の恵み農園</td>
-            </tr>
-            <tr>
-              <th>所在地</th>
-              <td>〒123-4567 千葉県〇〇市××町1丁目23-45</td>
-            </tr>
-            <tr>
-              <th>電話番号</th>
-              <td>012-3456-7890</td>
-            </tr>
-            <tr>
-              <th>営業時間</th>
-              <td>10:00〜18:00（土日祝を除く）</td>
-            </tr>
-            <tr>
-              <th>Googleマップ<br /><a href="#">拡大地図を表示</a></th>
-              <td>
-                <div class="access__gmap-wrapper">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3237.6072102590215!2d140.0589632757913!3d35.760457972561824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60227e5329d23245%3A0xd4cde63c28d3f984!2sFunabashi%20Andersen%20Park!5e0!3m2!1sen!2sjp!4v1721538976820!5m2!1sen!2sjp"
-                    width="100%"
-                    height="100%"
-                    style="border: 0"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                  ></iframe>
-                </div>
-              </td>
-            </tr>
-          </table>
+          <div class="access__table-wrapper">
+            <table class="access__table">
+              <tr>
+                <th>会社名</th>
+                <td>株式会社自然の恵み農園</td>
+              </tr>
+              <tr>
+                <th>所在地</th>
+                <td>
+                  <address>
+                    〒123-456<br class="sp-only" />千葉県〇〇市××町<br
+                      class="sp-only"
+                    />
+                    1丁目23-45
+                  </address>
+                </td>
+              </tr>
+              <tr>
+                <th>電話番号</th>
+                <td>012-3456-7890</td>
+              </tr>
+              <tr>
+                <th>営業時間</th>
+                <td>
+                  10:00〜18:00<br class="sp-only" />
+                  （土日祝を除く）
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  Googleマップ<br /><a
+                    href="https://maps.app.goo.gl/aVniWrrEDngQ47Sr6"
+                    target="_blank"
+                    >拡大地図を表示</a
+                  >
+                </th>
+                <td>
+                  <div class="access__gmap-wrapper pc-only">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3237.6072102590215!2d140.0589632757913!3d35.760457972561824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60227e5329d23245%3A0xd4cde63c28d3f984!2sFunabashi%20Andersen%20Park!5e0!3m2!1sen!2sjp!4v1721538976820!5m2!1sen!2sjp"
+                      width="100%"
+                      height="100%"
+                      style="border: 0"
+                      allowfullscreen=""
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                  </div>
+                </td>
+              </tr>
+            </table>
+            <div class="access__gmap-wrapper sp-only">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3237.6072102590215!2d140.0589632757913!3d35.760457972561824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60227e5329d23245%3A0xd4cde63c28d3f984!2sFunabashi%20Andersen%20Park!5e0!3m2!1sen!2sjp!4v1721538976820!5m2!1sen!2sjp"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="section-contact container">
+          <h2 class="section-contact__heading">お問い合わせ</h2>
+          <p class="section-contact__text">
+            お仕事のご相談、農園体験、牧場の見学、その他ご質問<br />
+            お気軽にお問い合わせください。
+          </p>
+          <a class="section-contact__btn btn btn-ja">お問い合わせ</a>
+          <p class="section-contact__bottom">
+            問い合わせ電話：<br class="sp-only" />
+            <span class="section-contact__bottom--large">123-4567-8910</span>
+          </p>
+          <p class="section-contact__bottom">
+            【受付時間】<br class="sp-only" />
+            10:00 ~ 18:00（土日祝を除く）
+          </p>
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__info">
+          <a href="#" class="footer__logo">
+            <img src="./img/logo.svg" alt="自然の恵み農園" />
+          </a>
+          <address class="footer__info-text">
+            〒123-4567<br />
+            千葉県〇〇市××町1丁目23-45
+          </address>
+          <address class="footer__info-text">
+            tel:123-4567-8910<br />
+            fax:12-345-6789
+          </address>
+        </div>
+        <div class="footer__link">
+          <nav class="footer__menu">
+            <ul>
+              <li><a href="#" class="footer__link-item">ホーム</a></li>
+              <li><a href="#" class="footer__link-item">私たちについて</a></li>
+              <li><a href="#" class="footer__link-item">活動紹介</a></li>
+              <li><a href="#" class="footer__link-item">よくあるご質問</a></li>
+              <li><a href="#" class="footer__link-item">お知らせ</a></li>
+              <li><a href="#" class="footer__link-item">アクセス</a></li>
+            </ul>
+          </nav>
+          <ul class="footer__sns">
+            <li>
+              <a
+                href="https://x.com/home"
+                target="_blank"
+                class="footer__sns-item"
+                ><i class="icon fa-brands fa-x-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                class="footer__sns-item"
+                ><i class="icon fa-brands fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/"
+                target="_blank"
+                class="footer__sns-item"
+                ><i class="icon fa-brands fa-youtube"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer__copyright">©︎ shizen-no-megumi-nouen Inc .2023</p>
+    </footer>
     <script src="./js/script.js"></script>
   </body>
 </html>
