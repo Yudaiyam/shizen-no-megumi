@@ -1,0 +1,27 @@
+@use "../global" as *;
+
+.page-top {
+  margin-top: 140px;
+  @include mq(sp) {
+    margin-top: 68px;
+  }
+}
+.breadcrumb {
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 72px;
+  @include mq(sp) {
+    margin-bottom: 36px;
+  }
+}
+.breadcrumb-arrow {
+  color: $primary;
+}
+
+.page__heading {
+  margin-bottom: 45px;
+  @include mq(sp) {
+    margin-bottom: 22px;
+  }
+}
