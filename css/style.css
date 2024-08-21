@@ -274,7 +274,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px 0 40px;
+  padding: 0 2.196193265vw 0 2.9282576867vw;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
 }
 @media screen and (max-width: 1023px) {
@@ -288,7 +288,6 @@ a {
 }
 @media screen and (max-width: 767px) {
   .header {
-    position: sticky;
     left: 0;
     translate: 0 0;
   }
@@ -316,7 +315,17 @@ a {
     position: relative;
   }
 }
-
+.header__btn.opened span:first-child {
+  top: 8px;
+  rotate: -20deg;
+}
+.header__btn.opened span:nth-child(2) {
+  top: 8px;
+  rotate: 20deg;
+}
+.header__btn.opened span:last-child:before {
+  content: "close";
+}
 .header__btn span {
   position: absolute;
   width: 20px;
@@ -324,23 +333,20 @@ a {
   background-color: #93c572;
   left: 50%;
   translate: -50% 0;
+  transition: all 0.3s ease;
 }
-
 .header__btn span:first-child {
   top: 3px;
 }
-
 .header__btn span:nth-child(2) {
   top: 10px;
 }
-
 .header__btn span:last-child {
   width: auto;
   height: auto;
   background-color: transparent;
   top: 17px;
 }
-
 .header__btn span:last-child:before {
   position: absolute;
   content: "menu";
@@ -354,14 +360,46 @@ a {
 
 @media screen and (max-width: 1023px) {
   .header__menu {
-    display: none;
+    position: fixed;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    height: 100vh;
+    background-color: #f9f9f9;
+    box-shadow: inset 0px 6px 6px -3px rgba(0, 0, 0, 0.1607843137);
+    padding: 0 15px;
+    translate: 100vw 0;
+    transition: all 0.3s ease;
+  }
+  .header__menu.opened {
+    translate: 0 0;
+  }
+  .header__menu .sp-only {
+    display: block;
+  }
+  .header__menu ul {
+    flex-direction: column;
+  }
+  .header__menu li {
+    width: 100%;
+    border-bottom: 1px solid #93c572;
+  }
+  .header__menu li:nth-last-child(2) {
+    border-bottom: none;
+  }
+  .header__menu li:last-child {
+    border-bottom: none;
   }
 }
-
 .header__menu ul {
   display: flex;
-  gap: 20px;
+  gap: 1.4641288433vw;
   align-items: center;
+}
+@media screen and (max-width: 1023px) {
+  .header__menu ul {
+    gap: 0;
+  }
 }
 
 .header__link {
@@ -369,6 +407,59 @@ a {
   font-weight: bold;
   font-size: 16px;
   letter-spacing: 0.05em;
+  position: relative;
+}
+@media screen and (max-width: 1023px) {
+  .header__link {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    padding: 18px 0;
+  }
+  .header__link:before {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 2px;
+    background-color: #93c572;
+    top: 50%;
+    right: 0;
+    translate: 0 -50%;
+  }
+  .header__link:after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 2px;
+    background-color: #93c572;
+    top: 45%;
+    right: 0;
+    translate: 0 -50%;
+    rotate: 30deg;
+  }
+}
+.header__link span {
+  color: #f7b560;
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.header__link--tel {
+  text-align: center;
+  color: #93c572;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-top: 16px;
+}
+
+.header__link--tel-large {
+  font-size: 20px;
+  margin-top: 8px;
 }
 
 .header__link--contact {
@@ -383,14 +474,26 @@ a {
   text-align: center;
   line-height: 48px;
 }
+@media screen and (max-width: 1023px) {
+  .header__link--contact {
+    width: 300px;
+    margin: 24px auto 0;
+  }
+}
 
 .fv {
   width: 100%;
   height: clamp(600px, 100vh, 768px);
   background: url("../img/FV.jpg") center/cover no-repeat;
+  background-attachment: fixed;
   position: relative;
   z-index: 0;
   margin-bottom: 45px;
+}
+@media screen and (max-width: 1023px) {
+  .fv {
+    background-attachment: unset;
+  }
 }
 @media screen and (max-width: 767px) {
   .fv {
@@ -524,6 +627,7 @@ a {
   right: 45px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
   padding: 14px 15px 18px 15px;
+  transition: 1s all ease;
 }
 @media screen and (max-width: 767px) {
   .fv__news {
@@ -534,6 +638,14 @@ a {
     right: auto;
     left: 20px;
     padding: 8px 10px;
+  }
+}
+.fv__news.hidden {
+  translate: 100vw 0;
+}
+@media screen and (max-width: 767px) {
+  .fv__news.hidden {
+    translate: -100vw 0;
   }
 }
 

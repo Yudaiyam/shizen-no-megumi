@@ -4,12 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>お手本（自然の恵み）</title>
+    <!-- web fontのCDNここから -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet"
     />
+    <!-- web fontのCDNここまで -->
+    <!-- font awesomeのCDNここから -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -17,7 +20,16 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- font awesomeのCDNここまで -->
     <link rel="stylesheet" href="./css/style.css" />
+    <!-- jqueryのCDNここから -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- jqueryのCDNここまで -->
   </head>
   <body>
     <header class="header">
@@ -31,15 +43,46 @@
       </button>
       <nav class="header__menu">
         <ul>
-          <li><a href="#about" class="header__link">私たちについて</a></li>
-          <li><a href="#introduction" class="header__link">活動紹介</a></li>
-          <li><a href="#faq" class="header__link">よくあるご質問</a></li>
-          <li><a href="#top-news" class="header__link">お知らせ</a></li>
-          <li><a href="#access" class="header__link">アクセス</a></li>
           <li>
-            <a href="#top-contact" class="header__link--contact"
-              >お問い合わせ</a
+            <a href="#" class="header__link"
+              >トップ<span class="sp-only">top</span></a
             >
+          </li>
+          <li>
+            <a href="#about" class="header__link"
+              >私たちについて<span class="sp-only">about</span></a
+            >
+          </li>
+          <li>
+            <a href="#introduction" class="header__link"
+              >活動紹介<span class="sp-only">works</span></a
+            >
+          </li>
+          <li>
+            <a href="#faq" class="header__link"
+              >よくあるご質問<span class="sp-only">faq</span></a
+            >
+          </li>
+          <li>
+            <a href="archive.html" class="header__link"
+              >お知らせ<span class="sp-only">news</span></a
+            >
+          </li>
+          <li>
+            <a href="#access" class="header__link"
+              >アクセス<span class="sp-only">access</span></a
+            >
+          </li>
+          <li class="sp-only">
+            <div class="header__link--tel">
+              お問い合わせ電話<br />
+              <span class="header__link--tel-large">123-4567-8910</span><br />
+              【受付時間】<br />
+              10:00 ~ 18:00（土日祝を除く）
+            </div>
+          </li>
+          <li>
+            <a href="#" class="header__link--contact">お問い合わせ</a>
           </li>
         </ul>
       </nav>
@@ -434,6 +477,6 @@
       </div>
       <p class="footer__copyright">©︎ shizen-no-megumi-nouen Inc .2023</p>
     </footer>
-    <script src="./js/script.js"></script>
+    <script src="./js/script.js" defer></script>
   </body>
 </html>

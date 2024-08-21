@@ -4,9 +4,13 @@
   width: 100%;
   height: clamp(600px, 100vh, 768px);
   background: url("../img/FV.jpg") center/cover no-repeat;
+  background-attachment: fixed;
   position: relative;
   z-index: 0;
   margin-bottom: 45px;
+  @media screen and (max-width: 1023px) {
+    background-attachment: unset;
+  }
   @include mq(sp) {
     height: 550px;
     margin-bottom: 40px;
@@ -120,6 +124,7 @@
   right: 45px;
   box-shadow: 0px 3px 6px #00000029;
   padding: 14px 15px 18px 15px;
+  transition: 1s all ease;
   @include mq(sp) {
     width: 142px;
     height: 76px;
@@ -128,6 +133,12 @@
     right: auto;
     left: 20px;
     padding: 8px 10px;
+  }
+  &.hidden {
+    translate: 100vw 0;
+    @include mq(sp) {
+      translate: -100vw 0;
+    }
   }
 }
 .fv__news-info {
