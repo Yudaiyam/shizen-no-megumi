@@ -19,36 +19,6 @@
 .header__logo {
   width: 170px;
 }
-.header__btn span {
-  position: absolute;
-  width: 20px;
-  height: 2px;
-  background-color: $primary;
-  left: 50%;
-  translate: -50% 0;
-}
-.header__btn span:first-child {
-  top: 3px;
-}
-.header__btn span:nth-child(2) {
-  top: 10px;
-}
-.header__btn span:last-child {
-  width: auto;
-  height: auto;
-  background-color: transparent;
-  top: 17px;
-}
-.header__btn span:last-child:before {
-  position: absolute;
-  content: "menu";
-  font-size: 10px;
-  color: $primary;
-  text-transform: uppercase;
-  top: 0;
-  left: 0;
-  translate: -50% 0;
-}
 .header__menu ul {
   display: flex;
   gap: 20px;
