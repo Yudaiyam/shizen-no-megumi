@@ -151,6 +151,11 @@ body {
 main {
   overflow-x: hidden;
 }
+@media screen and (max-width: 767px) {
+  main {
+    margin-top: 50px;
+  }
+}
 
 img {
   width: 100%;
