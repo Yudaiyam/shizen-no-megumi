@@ -424,6 +424,7 @@ a {
   width: 100%;
   height: clamp(600px, 100vh, 768px);
   background: url("../img/FV.jpg") center/cover no-repeat;
+  background-attachment: fixed;
   position: relative;
   z-index: 0;
   margin-bottom: 45px;
