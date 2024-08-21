@@ -14,7 +14,7 @@ body {
 }
 main {
   overflow-x: hidden;
-  @include mq(sp) {
+  @media screen and (max-width: 1023px) {
     margin-top: 50px;
   }
 }
