@@ -10,4 +10,21 @@
   @include mq(sp) {
     margin-inline: 15px;
   }
+  &-white {
+    background-color: #fff;
+    border-radius: 100px;
+    box-shadow: 1px 1px 10px #00000029;
+    @include mq(sp) {
+      border-radius: 50px;
+    }
+  }
+  &-second {
+    width: calc((600 / 1366) * 100vw);
+    max-width: 600px;
+    margin-inline: auto;
+    @include mq(sp) {
+      width: auto;
+      margin-inline: 20px;
+    }
+  }
 }
