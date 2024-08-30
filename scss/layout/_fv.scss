@@ -53,6 +53,9 @@
     font-size: 25px;
     text-shadow: none;
   }
+  @include mq(xs) {
+    font-size: 22px;
+  }
 }
 .fv__catch-break {
   display: none;
