@@ -87,6 +87,7 @@
   font-size: 16px;
   font-weight: bold;
   letter-spacing: 0.05em;
+  line-height: 1.5;
   &:before {
     content: counter(h2-num) ".";
     color: $secondary;
@@ -94,4 +95,11 @@
 }
 .toc__h3 {
   padding-left: 1.5em;
+  position: relative;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.5;
+  &:before{
+
+  }
 }
