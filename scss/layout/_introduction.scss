@@ -15,8 +15,11 @@
     width: 100%;
     margin-bottom: 74px;
     border-radius: 0;
-    padding: 48px 15px 50px;
-    justify-content: center;
+    padding: 48px 30px 50px;
+    justify-content: left;
+  }
+  @include mq(sp) {
+    padding-inline: 15px;
   }
 }
 .introduction__inner {
@@ -61,6 +64,9 @@
     line-height: 50px;
     font-size: 16px;
     border-radius: 10px;
+  }
+  @include mq(xs) {
+    width: 106px;
   }
   &.selected {
     background-color: $primary;
