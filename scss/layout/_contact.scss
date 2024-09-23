@@ -1,0 +1,134 @@
+@use "../global" as *;
+
+.contact__inner {
+  background-color: #fff;
+  border-radius: 100px;
+  box-shadow: 1px 1px 10px #00000029;
+  margin-bottom: 160px;
+  padding: 80px 50px;
+  @include mq(sp) {
+    border-radius: 50px;
+    margin-bottom: 60px;
+    padding: 30px 20px;
+  }
+}
+.contact__container {
+  width: min(calc((600 / 1366) * 100vw), 600px);
+  margin-inline: auto;
+  @include mq(sp) {
+    width: 100%;
+  }
+}
+.contact-item {
+  margin-bottom: 36px;
+  line-height: 1.5;
+  color: $text-color;
+}
+.contact-label {
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: $text-color;
+  margin-bottom: 12px;
+  @include mq(sp) {
+    margin-bottom: 8px;
+  }
+}
+.required {
+  padding: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  background-color: $primary;
+  border-radius: 5px;
+}
+.contact-input {
+  width: min(calc((500 / 1366) * 100vw), 500px);
+  height: 50px;
+  border: 1px solid $primary;
+  border-radius: 5px;
+  padding-inline: 12px;
+  @include mq(sp) {
+    width: 100%;
+  }
+}
+.contact-option {
+  width: min(calc((400 / 1366) * 100vw), 400px);
+  color: #cbcbcb;
+  position: relative;
+  padding-inline: 20px;
+  @include mq(sp) {
+    width: 100%;
+  }
+  &:before {
+    position: absolute;
+    content: "\f077";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: $primary;
+    font-size: 16px;
+    top: 50%;
+    right: 20px;
+    translate: 0 -50%;
+  }
+  select {
+    border: none;
+    width: 100%;
+    height: 100%;
+    color: #cbcbcb;
+    background-color: transparent;
+    appearance: none;
+    border: none;
+    &:focus-visible {
+      border: none;
+    }
+  }
+}
+.contact-message {
+  width: min(calc((600 / 1366) * 100vw), 600px);
+  height: 150px;
+  margin-bottom: 50px;
+  padding: 12px;
+  @include mq(sp) {
+    width: 100%;
+  }
+  @include mq(sp) {
+    margin-bottom: 30px;
+  }
+}
+.contact-submit {
+  display: block;
+  margin-inline: auto;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+}
+.contact-thanks__container {
+  text-align: center;
+}
+.contact-thanks__title {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.35;
+  margin-bottom: 24px;
+  @include mq(sp) {
+    margin-bottom: 20px;
+  }
+}
+.contact-thanks__paragraph {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  @include mq(sp) {
+    margin-bottom: 24px;
+  }
+}
+.contact-thanks__submit {
+  margin-top: 48px;
+  @include mq(sp) {
+    margin-top: 28px;
+  }
+}

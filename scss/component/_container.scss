@@ -20,10 +20,11 @@
   }
   &-second {
     width: calc((600 / 1366) * 100vw);
-    max-width: 600px;
+    min-width: 600px;
     margin-inline: auto;
     @include mq(sp) {
       width: auto;
+      min-width: auto;
       margin-inline: 20px;
     }
   }
