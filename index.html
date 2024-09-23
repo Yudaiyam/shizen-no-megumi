@@ -23,18 +23,10 @@
     <!-- font awesomeのCDNここまで -->
     <!-- ※ font awesomeについては、README.mdをお読みください -->
     <link rel="stylesheet" href="./css/style.css" />
-    <!-- jqueryのCDNここから -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <!-- jqueryのCDNここまで -->
   </head>
   <body>
     <header class="header">
-      <a href="#" class="header__logo">
+      <a href="./index.html" class="header__logo">
         <img src="./img/logo.svg" alt="自然の恵み農園" />
       </a>
       <button class="header__btn" type="button">
@@ -45,45 +37,26 @@
       <nav class="header__menu">
         <ul>
           <li>
-            <a href="#" class="header__link"
-              >トップ<span class="sp-only">top</span></a
+            <a href="./index.html#about" class="header__link">私たちについて</a>
+          </li>
+          <li>
+            <a href="./index.html#introduction" class="header__link"
+              >活動紹介</a
             >
           </li>
           <li>
-            <a href="#about" class="header__link"
-              >私たちについて<span class="sp-only">about</span></a
-            >
+            <a href="./index.html#faq" class="header__link">よくあるご質問</a>
           </li>
           <li>
-            <a href="#introduction" class="header__link"
-              >活動紹介<span class="sp-only">works</span></a
-            >
+            <a href="archive.html" class="header__link">お知らせ</a>
           </li>
           <li>
-            <a href="#faq" class="header__link"
-              >よくあるご質問<span class="sp-only">faq</span></a
-            >
+            <a href="./index.html#access" class="header__link">アクセス</a>
           </li>
           <li>
-            <a href="archive.html" class="header__link"
-              >お知らせ<span class="sp-only">news</span></a
+            <a href="./contact.html" class="header__link--contact"
+              >お問い合わせ</a
             >
-          </li>
-          <li>
-            <a href="#access" class="header__link"
-              >アクセス<span class="sp-only">access</span></a
-            >
-          </li>
-          <li class="sp-only">
-            <div class="header__link--tel">
-              お問い合わせ電話<br />
-              <span class="header__link--tel-large">123-4567-8910</span><br />
-              【受付時間】<br />
-              10:00 ~ 18:00（土日祝を除く）
-            </div>
-          </li>
-          <li>
-            <a href="#" class="header__link--contact">お問い合わせ</a>
           </li>
         </ul>
       </nav>
@@ -414,7 +387,9 @@
             お仕事のご相談、農園体験、牧場の見学、その他ご質問<br />
             お気軽にお問い合わせください。
           </p>
-          <a href="#" class="section-contact__btn btn btn-ja">お問い合わせ</a>
+          <a href="./contact.html" class="section-contact__btn btn btn-ja"
+            >お問い合わせ</a
+          >
           <p class="section-contact__bottom">
             問い合わせ電話：<br class="sp-only" />
             <span class="section-contact__bottom--large">123-4567-8910</span>
@@ -448,18 +423,28 @@
                 <a href="./index.html" class="footer__link-item">ホーム</a>
               </li>
               <li>
-                <a href="#about" class="footer__link-item">私たちについて</a>
+                <a href="./index.html#about" class="footer__link-item"
+                  >私たちについて</a
+                >
               </li>
               <li>
-                <a href="#introduction" class="footer__link-item">活動紹介</a>
+                <a href="./index.html#introduction" class="footer__link-item"
+                  >活動紹介</a
+                >
               </li>
               <li>
-                <a href="#faq" class="footer__link-item">よくあるご質問</a>
+                <a href="./index.html#faq" class="footer__link-item"
+                  >よくあるご質問</a
+                >
               </li>
               <li>
                 <a href="./archive.html" class="footer__link-item">お知らせ</a>
               </li>
-              <li><a href="#access" class="footer__link-item">アクセス</a></li>
+              <li>
+                <a href="./index.html#access" class="footer__link-item"
+                  >アクセス</a
+                >
+              </li>
             </ul>
           </nav>
           <ul class="footer__sns">
@@ -492,6 +477,5 @@
       </div>
       <p class="footer__copyright">©︎ shizen-no-megumi-nouen Inc .2023</p>
     </footer>
-    <script src="./js/script.js" defer></script>
   </body>
 </html>
