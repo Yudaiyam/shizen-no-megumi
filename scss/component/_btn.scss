@@ -13,6 +13,10 @@
   font-size: 20px;
   letter-spacing: 0.1em;
   text-transform: capitalize;
+  &:hover {
+    background-color: $primary;
+    color: #fff;
+  }
   &-ja {
     font-family: "Yu Gothic", "Helvetica Neue", "Helvetica", "Hiragino Sans",
       "Hiragino Kaku Gothic ProN", "Arial", "Meiryo", sans-serif;

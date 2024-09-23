@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>お手本（自然の恵み）</title>
-    <!-- webフォントのCDNここから -->
+    <!-- web fontのCDNここから -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,6 +23,14 @@
     <!-- font awesomeのCDNここまで -->
     <!-- ※ font awesomeについては、README.mdをお読みください -->
     <link rel="stylesheet" href="./css/style.css" />
+    <!-- jqueryのCDNここから -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- jqueryのCDNここまで -->
   </head>
   <body>
     <header class="header">
@@ -36,15 +44,46 @@
       </button>
       <nav class="header__menu">
         <ul>
-          <li><a href="#about" class="header__link">私たちについて</a></li>
-          <li><a href="#introduction" class="header__link">活動紹介</a></li>
-          <li><a href="#faq" class="header__link">よくあるご質問</a></li>
-          <li><a href="./archive.html" class="header__link">お知らせ</a></li>
-          <li><a href="#access" class="header__link">アクセス</a></li>
           <li>
-            <a href="#top-contact" class="header__link--contact"
-              >お問い合わせ</a
+            <a href="#" class="header__link"
+              >トップ<span class="sp-only">top</span></a
             >
+          </li>
+          <li>
+            <a href="#about" class="header__link"
+              >私たちについて<span class="sp-only">about</span></a
+            >
+          </li>
+          <li>
+            <a href="#introduction" class="header__link"
+              >活動紹介<span class="sp-only">works</span></a
+            >
+          </li>
+          <li>
+            <a href="#faq" class="header__link"
+              >よくあるご質問<span class="sp-only">faq</span></a
+            >
+          </li>
+          <li>
+            <a href="archive.html" class="header__link"
+              >お知らせ<span class="sp-only">news</span></a
+            >
+          </li>
+          <li>
+            <a href="#access" class="header__link"
+              >アクセス<span class="sp-only">access</span></a
+            >
+          </li>
+          <li class="sp-only">
+            <div class="header__link--tel">
+              お問い合わせ電話<br />
+              <span class="header__link--tel-large">123-4567-8910</span><br />
+              【受付時間】<br />
+              10:00 ~ 18:00（土日祝を除く）
+            </div>
+          </li>
+          <li>
+            <a href="#" class="header__link--contact">お問い合わせ</a>
           </li>
         </ul>
       </nav>
@@ -61,7 +100,7 @@
         </div>
         <a href="#" class="fv__scroll"> scroll</a>
         <article>
-          <a href="#" class="fv__news">
+          <a href="./single.html" class="fv__news">
             <div class="fv__news-info">
               <h2 class="fv__news-heading">news</h2>
               <time class="fv__news-date" datetime="YYYY-MM-DD"
@@ -164,7 +203,7 @@
           <div class="faq__item">
             <button type="button" class="faq__question">
               <span>Q</span>
-              <p>農園の野菜や果物は有機栽培ですか？</p>
+              <h3>農園の野菜や果物は有機栽培ですか？</h3>
             </button>
             <div class="faq__answer">
               <span>A</span>
@@ -177,7 +216,7 @@
           <div class="faq__item">
             <button type="button" class="faq__question">
               <span>Q</span>
-              <p>農園での見学や体験ツアーは行っていますか？</p>
+              <h3>農園での見学や体験ツアーは行っていますか？</h3>
             </button>
             <div class="faq__answer">
               <span>A</span>
@@ -190,7 +229,7 @@
           <div class="faq__item">
             <button type="button" class="faq__question">
               <span>Q</span>
-              <p>農園での見学や体験ツアーは行っていますか？</p>
+              <h3>農園での見学や体験ツアーは行っていますか？</h3>
             </button>
             <div class="faq__answer">
               <span>A</span>
@@ -203,7 +242,7 @@
           <div class="faq__item">
             <button type="button" class="faq__question">
               <span>Q</span>
-              <p>オンラインで注文した農産物はどのように配送されますか？</p>
+              <h3>オンラインで注文した農産物はどのように配送されますか？</h3>
             </button>
             <div class="faq__answer">
               <span>A</span>
@@ -216,7 +255,7 @@
           <div class="faq__item">
             <button type="button" class="faq__question">
               <span>Q</span>
-              <p>農園で提供される季節ごとの野菜や果物の品種は何ですか？</p>
+              <h3>農園で提供される季節ごとの野菜や果物の品種は何ですか？</h3>
             </button>
             <div class="faq__answer">
               <span>A</span>
@@ -244,7 +283,7 @@
             <ul>
               <li>
                 <article>
-                  <a href="#" class="top-news__article">
+                  <a href="./single.html" class="top-news__article">
                     <div class="top-news__article-info">
                       <time class="top-news__article-date" datetime="YYYY-MM-DD"
                         >YYYY.MM.DD</time
@@ -261,7 +300,7 @@
               </li>
               <li>
                 <article>
-                  <a href="#" class="top-news__article">
+                  <a href="./single.html" class="top-news__article">
                     <div class="top-news__article-info">
                       <time class="top-news__article-date" datetime="YYYY-MM-DD"
                         >YYYY.MM.DD</time
@@ -278,7 +317,7 @@
               </li>
               <li>
                 <article>
-                  <a href="#" class="top-news__article">
+                  <a href="./single.html" class="top-news__article">
                     <div class="top-news__article-info">
                       <time class="top-news__article-date" datetime="YYYY-MM-DD"
                         >YYYY.MM.DD</time
@@ -390,7 +429,7 @@
     <footer class="footer">
       <div class="footer__container container">
         <div class="footer__info">
-          <a href="#" class="footer__logo">
+          <a href="./index.html" class="footer__logo">
             <img src="./img/logo.svg" alt="自然の恵み農園" />
           </a>
           <address class="footer__info-text">
@@ -405,7 +444,9 @@
         <div class="footer__link">
           <nav class="footer__menu">
             <ul>
-              <li><a href="#" class="footer__link-item">ホーム</a></li>
+              <li>
+                <a href="./index.html" class="footer__link-item">ホーム</a>
+              </li>
               <li>
                 <a href="#about" class="footer__link-item">私たちについて</a>
               </li>
@@ -451,6 +492,6 @@
       </div>
       <p class="footer__copyright">©︎ shizen-no-megumi-nouen Inc .2023</p>
     </footer>
-    <script src="./js/script.js"></script>
+    <script src="./js/script.js" defer></script>
   </body>
 </html>

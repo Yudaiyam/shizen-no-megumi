@@ -8,7 +8,13 @@
   margin-bottom: 110px;
   @include mq(sp) {
     display: block;
+    margin-inline: auto;
     margin-bottom: 75px;
+  }
+}
+.top-news__intro {
+  @include mq(sp) {
+    margin-inline: 15px;
   }
 }
 .top-news__heading {

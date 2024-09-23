@@ -18,6 +18,12 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </head>
   <body>
     <header class="header">
@@ -31,13 +37,46 @@
       </button>
       <nav class="header__menu">
         <ul>
-          <li><a href="#about" class="header__link">私たちについて</a></li>
-          <li><a href="#introduction" class="header__link">活動紹介</a></li>
-          <li><a href="#faq" class="header__link">よくあるご質問</a></li>
-          <li><a href="./archive.html" class="header__link">お知らせ</a></li>
-          <li><a href="#access" class="header__link">アクセス</a></li>
           <li>
-            <a href="#top-contact" class="header__link--contact"
+            <a href="#" class="header__link"
+              >トップ<span class="sp-only">top</span></a
+            >
+          </li>
+          <li>
+            <a href="#about" class="header__link"
+              >私たちについて<span class="sp-only">about</span></a
+            >
+          </li>
+          <li>
+            <a href="#introduction" class="header__link"
+              >活動紹介<span class="sp-only">works</span></a
+            >
+          </li>
+          <li>
+            <a href="#faq" class="header__link"
+              >よくあるご質問<span class="sp-only">faq</span></a
+            >
+          </li>
+          <li>
+            <a href="archive.html" class="header__link"
+              >お知らせ<span class="sp-only">news</span></a
+            >
+          </li>
+          <li>
+            <a href="#access" class="header__link"
+              >アクセス<span class="sp-only">access</span></a
+            >
+          </li>
+          <li class="sp-only">
+            <div class="header__link--tel">
+              お問い合わせ電話<br />
+              <span class="header__link--tel-large">123-4567-8910</span><br />
+              【受付時間】<br />
+              10:00 ~ 18:00（土日祝を除く）
+            </div>
+          </li>
+          <li>
+            <a href="./contact.html" class="header__link--contact"
               >お問い合わせ</a
             >
           </li>
@@ -65,24 +104,93 @@
             </div>
           </div>
         </div>
-        <div class="single__container">
-          <div class="single__thumbnail">
-            <img
-              src="./img/no-image.png"
-              width="600"
-              height="391"
-              loading="lazy"
-              alt="タイトルが入ります。タイトルが入ります。"
-            />
-          </div>
-          <div class="toc">
-            <h2 class="toc__heading">目次</h2>
-            <ol>
-              <li>
-                <a href="#h2-01"> h2タイトルが入ります。 </a>
-              </li>
-              <li></li>
-            </ol>
+        <div class="single__container container container-white">
+          <div class="container-second">
+            <div class="single__thumbnail">
+              <img
+                src="./img/no-image.png"
+                width="600"
+                height="391"
+                loading="lazy"
+                alt="タイトルが入ります。タイトルが入ります。"
+              />
+            </div>
+            <div class="toc">
+              <h2 class="toc__heading">目次</h2>
+              <ol class="toc__inner">
+                <li>
+                  <a href="#h2-01" class="toc__h2"> H2タイトルが入ります。 </a>
+                  <ul>
+                    <li>
+                      <a href="#h3-01" class="toc__h3"
+                        >H3タイトルが入ります。H3タイトルが入ります。</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#h2-02" class="toc__h2"> H2タイトルが入ります。 </a>
+                  <ul>
+                    <li>
+                      <a href="#h3-02" class="toc__h3"
+                        >H3タイトルが入ります。H3タイトルが入ります。</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+            <section>
+              <div class="single-section">
+                <h2 class="single-section__subheading" id="h2-01">
+                  H2タイトルが入ります。
+                </h2>
+                <p class="single-section__paragraph">
+                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                </p>
+                <h3 class="single-section__subsubheading" id="h3-01">
+                  H3タイトルが入ります。H3タイトルが入ります。
+                </h3>
+                <p class="single-section__paragraph">
+                  ・リスト項目<br />
+                  ・リスト項目<br />
+                  ・リスト項目<br />
+                  ・リスト項目<br />
+                  ・リスト項目
+                  <br />
+                  <br />
+                  <br />
+                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                </p>
+              </div>
+            </section>
+            <section>
+              <div class="single-section">
+                <h2 class="single-section__subheading" id="h2-02">
+                  H2タイトルが入ります。
+                </h2>
+                <div class="single-section__img">
+                  <img
+                    src="./img/work-nouen02.png"
+                    width="290"
+                    height="286"
+                    alt="籠に入った苺の写真"
+                  />
+                </div>
+                <p class="single-section__paragraph">
+                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                </p>
+                <h3 class="single-section__subsubheading" id="h3-02">
+                  H3タイトルが入ります。H3タイトルが入ります。
+                </h3>
+                <p class="single-section__paragraph">
+                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                </p>
+              </div>
+            </section>
+            <a href="./index.html" class="single-btn btn btn-ja">一覧に戻る</a>
           </div>
         </div>
       </article>
