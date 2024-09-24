@@ -23,6 +23,22 @@
     <!-- font awesomeのCDNここまで -->
     <!-- ※ font awesomeについては、README.mdをお読みください -->
     <link rel="stylesheet" href="./css/style.css" />
+    <!-- slickのcssのCDNここから -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- slickのcssのCDNここまで -->
     <!-- jqueryのCDNここから -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
@@ -31,11 +47,24 @@
       referrerpolicy="no-referrer"
     ></script>
     <!-- jqueryのCDNここまで -->
+    <!-- slickのjsのCDNここから -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+      integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- slickのjsのCDNここまで -->
   </head>
   <body>
     <header class="header">
-      <a href="#" class="header__logo">
-        <img src="./img/logo.svg" alt="自然の恵み農園" />
+      <a href="./index.html" class="header__logo">
+        <img
+          src="./img/logo.svg"
+          width="170"
+          height="29"
+          alt="自然の恵み農園"
+        />
       </a>
       <button class="header__btn" type="button">
         <span></span>
@@ -45,22 +74,22 @@
       <nav class="header__menu">
         <ul>
           <li>
-            <a href="#" class="header__link"
+            <a href="./index.html" class="header__link"
               >トップ<span class="sp-only">top</span></a
             >
           </li>
           <li>
-            <a href="#about" class="header__link"
+            <a href="./index.html#about" class="header__link"
               >私たちについて<span class="sp-only">about</span></a
             >
           </li>
           <li>
-            <a href="#introduction" class="header__link"
+            <a href="./index.html#introduction" class="header__link"
               >活動紹介<span class="sp-only">works</span></a
             >
           </li>
           <li>
-            <a href="#faq" class="header__link"
+            <a href="./index.html#faq" class="header__link"
               >よくあるご質問<span class="sp-only">faq</span></a
             >
           </li>
@@ -70,7 +99,7 @@
             >
           </li>
           <li>
-            <a href="#access" class="header__link"
+            <a href="./index.html#access" class="header__link"
               >アクセス<span class="sp-only">access</span></a
             >
           </li>
@@ -83,7 +112,9 @@
             </div>
           </li>
           <li>
-            <a href="#" class="header__link--contact">お問い合わせ</a>
+            <a href="./contact.html" class="header__link--contact"
+              >お問い合わせ</a
+            >
           </li>
         </ul>
       </nav>
@@ -92,7 +123,12 @@
       <div class="fv">
         <div class="fv__content">
           <div class="fv__logo">
-            <img src="./img/logo-2.svg" alt="自然の恵み農園" />
+            <img
+              src="./img/logo-2.svg"
+              width="204"
+              height="158"
+              alt="自然の恵み農園"
+            />
           </div>
           <h1 class="fv__catch">
             自然の恵みを感じ、<br class="fv__catch-break" />豊かな未来を。
@@ -115,40 +151,55 @@
       </div>
       <section>
         <div class="about container" id="about">
-          <div class="about__img">
+          <div class="about__img fade-up">
             <img
               src="./img/about-image01.png"
               width="200"
               height="252"
+              loading="lazy"
+              decoding="async"
               alt="山羊の写真"
             />
           </div>
-          <div class="about__img">
+          <div class="about__img fade-up delay-500ms">
             <img
               src="./img/about-image02.png"
               width="181"
               height="217"
+              loading="lazy"
+              decoding="async"
               alt="トマトの写真"
             />
           </div>
-          <div class="about__img">
+          <div class="about__img fade-up delay-500ms">
             <img
               src="./img/about-image03.png"
               width="200"
               height="200"
+              loading="lazy"
+              decoding="async"
               alt="笑う職員の写真"
             />
           </div>
-          <div class="about__img">
+          <div class="about__img fade-up delay-1000ms">
             <img
               src="./img/about-image04.png"
               width="235"
               height="269"
+              loading="lazy"
+              decoding="async"
               alt="牛の写真"
             />
           </div>
           <h2 class="about__heading">
-            <img src="./img/logo.svg" alt="自然の恵み農園" />
+            <img
+              src="./img/logo.svg"
+              width="304"
+              height="54"
+              loading="lazy"
+              decoding="async"
+              alt="自然の恵み農園"
+            />
           </h2>
           <p class="about__text">
             自然の恵み農園は、<br />
@@ -172,25 +223,284 @@
           <div class="introduction__inner">
             <h2 class="introduction__heading section__heading">活動紹介</h2>
             <div class="introduction__tabs-wrapper">
-              <a href="#" class="introduction__tab selected">
+              <a href="#farm" class="introduction__tab selected">
                 <h3>農園</h3>
               </a>
-              <a href="#" class="introduction__tab">
+              <a href="#pasture" class="introduction__tab">
                 <h3>牧場</h3>
               </a>
-              <a href="#" class="introduction__tab">
+              <a href="#ec" class="introduction__tab">
                 <h3>オンライン販売</h3>
               </a>
             </div>
-            <div class="introduction__area">
+            <div class="introduction__area show" id="farm">
               <p class="introduction__paragraph">
-                私たちは、　「持続可能な農業」を掲げて、自然の恵みに感謝しながら、農作物を育てています。<br />
+                私たちは、「持続可能な農業」を掲げて、自然の恵みに感謝しながら、農作物を育てています。<br />
                 無農薬で、体にも環境にも優しく、季節ごとに異なる品種を育て、提供しています。<br />
                 ぜひ一度、農園にお越し頂き、自分の手で収穫した新鮮な野菜、果物をお召し上がりください。
               </p>
               <div class="introduction__slider">
                 <div class="introduction__slide">
-                  <img src="./img/work-nouen01.png" alt="" />
+                  <img
+                    src="./img/work-nouen01.png"
+                    width="300"
+                    height="250"
+                    loading="lazy"
+                    decoding="async"
+                    alt="笑顔でガッツポーズする職員たちの写真"
+                  />
+                </div>
+                <div class="introduction__slide">
+                  <img
+                    src="./img/work-nouen02.png"
+                    width="300"
+                    height="250"
+                    loading="lazy"
+                    decoding="async"
+                    alt="バスケットに詰まった苺の写真"
+                  />
+                </div>
+                <div class="introduction__slide">
+                  <img
+                    src="./img/work-nouen03.png"
+                    width="300"
+                    height="250"
+                    loading="lazy"
+                    decoding="async"
+                    alt="作業中の職員の写真"
+                  />
+                </div>
+                <div class="introduction__slide">
+                  <img
+                    src="./img/work-nouen04.png"
+                    width="300"
+                    height="250"
+                    loading="lazy"
+                    decoding="async"
+                    alt="作物が均等に栽培されている畑の写真"
+                  />
+                </div>
+                <div class="introduction__slide">
+                  <img
+                    src="./img/work-nouen01.png"
+                    width="300"
+                    height="250"
+                    loading="lazy"
+                    decoding="async"
+                    alt="笑顔でガッツポーズする職員たちの写真"
+                  />
+                </div>
+                <div class="introduction__slide">
+                  <img
+                    src="./img/work-nouen02.png"
+                    width="300"
+                    height="250"
+                    loading="lazy"
+                    decoding="async"
+                    alt="バスケットに詰まった苺の写真"
+                  />
+                </div>
+                <div class="introduction__slide">
+                  <img
+                    src="./img/work-nouen03.png"
+                    width="300"
+                    height="250"
+                    loading="lazy"
+                    decoding="async"
+                    alt="作業中の職員の写真"
+                  />
+                </div>
+                <div class="introduction__slide">
+                  <img
+                    src="./img/work-nouen04.png"
+                    width="300"
+                    height="250"
+                    loading="lazy"
+                    decoding="async"
+                    alt="作物が均等に栽培されている畑の写真"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="introduction__area" id="pasture">
+              <p class="introduction__paragraph">
+                私たちの牧場は、自然と動物との共存を尊重し、持続可能な農業の原則に基づいて運営されています。
+                <br />
+                広々とした環境で、動物たちとのふれ合いを通じて、自然の恵みと動物の尊さを感じ、
+                <br class="pc-only" />
+                心温まるひとときを過ごしていただけます。
+              </p>
+              <div class="introduction__slider">
+                <div class="introduction__slide">
+                  <img
+                    src="./img/work-bokujo01.png"
+                    width="300"
+                    height="250"
+                    loading="lazy"
+                    decoding="async"
+                    alt="牧場で飼育されている牛たちの写真"
+                  />
+                </div>
+                <div class="introduction__slide">
+                  <img
+                    src="./img/work-bokujo02.png"
+                    width="300"
+                    height="250"
+                    loading="lazy"
+                    decoding="async"
+                    alt="牧場で飼育されている馬たちの写真"
+                  />
+                </div>
+                <div class="introduction__slide">
+                  <img
+                    src="./img/work-bokujo03.png"
+                    width="300"
+                    height="250"
+                    loading="lazy"
+                    decoding="async"
+                    alt="牧場で飼育されている豚たちの写真"
+                  />
+                </div>
+                <div class="introduction__slide">
+                  <img
+                    src="./img/work-bokujo04.png"
+                    width="300"
+                    height="250"
+                    loading="lazy"
+                    decoding="async"
+                    alt="牧場で飼育されている山羊の写真"
+                  />
+                </div>
+                <div class="introduction__slide">
+                  <img
+                    src="./img/work-bokujo01.png"
+                    width="300"
+                    height="250"
+                    loading="lazy"
+                    decoding="async"
+                    alt="牧場で飼育されている牛たちの写真"
+                  />
+                </div>
+                <div class="introduction__slide">
+                  <img
+                    src="./img/work-bokujo02.png"
+                    width="300"
+                    height="250"
+                    loading="lazy"
+                    decoding="async"
+                    alt="牧場で飼育されている馬たちの写真"
+                  />
+                </div>
+                <div class="introduction__slide">
+                  <img
+                    src="./img/work-bokujo03.png"
+                    width="300"
+                    height="250"
+                    loading="lazy"
+                    decoding="async"
+                    alt="牧場で飼育されている豚たちの写真"
+                  />
+                </div>
+                <div class="introduction__slide">
+                  <img
+                    src="./img/work-bokujo04.png"
+                    width="300"
+                    height="250"
+                    loading="lazy"
+                    decoding="async"
+                    alt="牧場で飼育されている山羊の写真"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="introduction__area" id="ec">
+              <p class="introduction__paragraph">
+                自然の恵み農園から直接お届けする、新鮮で美味しい農産物と<br
+                  class="pc-only"
+                />
+                手作りのジャムやバターなどの加工品を提供しています。 <br />
+                自然の恩恵をご自宅でお楽しみいただけます。
+              </p>
+              <div class="introduction__slider">
+                <div class="introduction__slide">
+                  <img
+                    src="./img/work-ec01.png"
+                    width="300"
+                    height="250"
+                    loading="lazy"
+                    decoding="async"
+                    alt="自然の恵み農園で販売されているアイスの写真"
+                  />
+                </div>
+                <div class="introduction__slide">
+                  <img
+                    src="./img/work-ec02.png"
+                    width="300"
+                    height="250"
+                    loading="lazy"
+                    decoding="async"
+                    alt="自然の恵み農園で販売されているバターの写真"
+                  />
+                </div>
+                <div class="introduction__slide">
+                  <img
+                    src="./img/work-ec03.png"
+                    width="300"
+                    height="250"
+                    loading="lazy"
+                    decoding="async"
+                    alt="自然の恵み農園で販売されているジャムの写真"
+                  />
+                </div>
+                <div class="introduction__slide">
+                  <img
+                    src="./img/work-ec04.png"
+                    width="300"
+                    height="250"
+                    loading="lazy"
+                    decoding="async"
+                    alt="自然の恵み農園で販売されている野菜の写真"
+                  />
+                </div>
+                <div class="introduction__slide">
+                  <img
+                    src="./img/work-ec01.png"
+                    width="300"
+                    height="250"
+                    loading="lazy"
+                    decoding="async"
+                    alt="自然の恵み農園で販売されているアイスの写真"
+                  />
+                </div>
+                <div class="introduction__slide">
+                  <img
+                    src="./img/work-ec02.png"
+                    width="300"
+                    height="250"
+                    loading="lazy"
+                    decoding="async"
+                    alt="自然の恵み農園で販売されているバターの写真"
+                  />
+                </div>
+                <div class="introduction__slide">
+                  <img
+                    src="./img/work-ec03.png"
+                    width="300"
+                    height="250"
+                    loading="lazy"
+                    decoding="async"
+                    alt="自然の恵み農園で販売されているジャムの写真"
+                  />
+                </div>
+                <div class="introduction__slide">
+                  <img
+                    src="./img/work-ec04.png"
+                    width="300"
+                    height="250"
+                    loading="lazy"
+                    decoding="async"
+                    alt="自然の恵み農園で販売されている野菜の写真"
+                  />
                 </div>
               </div>
             </div>
@@ -414,7 +724,9 @@
             お仕事のご相談、農園体験、牧場の見学、その他ご質問<br />
             お気軽にお問い合わせください。
           </p>
-          <a href="#" class="section-contact__btn btn btn-ja">お問い合わせ</a>
+          <a href="./contact.html" class="section-contact__btn btn btn-ja"
+            >お問い合わせ</a
+          >
           <p class="section-contact__bottom">
             問い合わせ電話：<br class="sp-only" />
             <span class="section-contact__bottom--large">123-4567-8910</span>
@@ -430,7 +742,14 @@
       <div class="footer__container container">
         <div class="footer__info">
           <a href="./index.html" class="footer__logo">
-            <img src="./img/logo.svg" alt="自然の恵み農園" />
+            <img
+              src="./img/logo.svg"
+              width="202"
+              height="34"
+              loading="lazy"
+              decoding="async"
+              alt="自然の恵み農園"
+            />
           </a>
           <address class="footer__info-text">
             〒123-4567<br />
@@ -448,18 +767,28 @@
                 <a href="./index.html" class="footer__link-item">ホーム</a>
               </li>
               <li>
-                <a href="#about" class="footer__link-item">私たちについて</a>
+                <a href="./index.html#about" class="footer__link-item"
+                  >私たちについて</a
+                >
               </li>
               <li>
-                <a href="#introduction" class="footer__link-item">活動紹介</a>
+                <a href="./index.html#introduction" class="footer__link-item"
+                  >活動紹介</a
+                >
               </li>
               <li>
-                <a href="#faq" class="footer__link-item">よくあるご質問</a>
+                <a href="./index.html#faq" class="footer__link-item"
+                  >よくあるご質問</a
+                >
               </li>
               <li>
                 <a href="./archive.html" class="footer__link-item">お知らせ</a>
               </li>
-              <li><a href="#access" class="footer__link-item">アクセス</a></li>
+              <li>
+                <a href="./index.html#access" class="footer__link-item"
+                  >アクセス</a
+                >
+              </li>
             </ul>
           </nav>
           <ul class="footer__sns">
@@ -492,6 +821,7 @@
       </div>
       <p class="footer__copyright">©︎ shizen-no-megumi-nouen Inc .2023</p>
     </footer>
+    <script src="./js/jquery.inview.min.js" defer></script>
     <script src="./js/script.js" defer></script>
   </body>
 </html>

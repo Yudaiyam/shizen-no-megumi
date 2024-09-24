@@ -345,6 +345,24 @@ a {
   }
 }
 
+.fade-up {
+  opacity: 0;
+  translate: 0 100px;
+  transition: 1s all ease;
+}
+.fade-up.is-show {
+  opacity: 1;
+  translate: 0 0;
+}
+
+.delay-500ms {
+  transition-delay: 0.5s;
+}
+
+.delay-1000ms {
+  transition-delay: 1s;
+}
+
 .header {
   width: 94.5827232796vw;
   height: 90px;
@@ -1003,6 +1021,17 @@ a {
   color: #f7b560;
 }
 
+.introduction__area {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+.introduction__area.show {
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}
+
 .introduction__paragraph {
   font-size: 16px;
   line-height: 1.5;
@@ -1014,13 +1043,26 @@ a {
   }
 }
 
-.introduction__slide {
-  width: 300px;
+.introduction__slider {
+  display: none;
+}
+.introduction__slider.slick-initialize {
+  display: block;
+}
+.introduction__slider .slick-list {
+  overflow: visible;
+}
+.introduction__slider .slick-slide {
+  width: 324px;
 }
 @media screen and (max-width: 767px) {
-  .introduction__slide {
-    width: 250px;
+  .introduction__slider .slick-slide {
+    width: 274px;
   }
+}
+
+.introduction__slide {
+  padding-inline: 12px;
 }
 
 .faq {
@@ -1149,6 +1191,7 @@ a {
   right: 0;
   translate: 0 -50%;
   rotate: 90deg;
+  transition: all 0.3s ease;
 }
 @media screen and (max-width: 767px) {
   .faq__question:after {
@@ -1157,10 +1200,10 @@ a {
 }
 
 .faq__answer {
-  display: flex;
   align-items: center;
   gap: 18px;
   margin-top: 24px;
+  display: none;
 }
 @media screen and (max-width: 767px) {
   .faq__answer {

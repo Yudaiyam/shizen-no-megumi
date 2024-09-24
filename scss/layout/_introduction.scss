@@ -79,6 +79,14 @@
   }
 }
 .introduction__area {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+  }
 }
 .introduction__paragraph {
   font-size: 16px;
@@ -88,9 +96,21 @@
     margin-bottom: 36px;
   }
 }
-.introduction__slide {
-  width: 300px;
-  @include mq(sp) {
-    width: 250px;
+.introduction__slider {
+  display: none;
+  &.slick-initialize {
+    display: block;
   }
+  .slick-list {
+    overflow: visible;
+  }
+  .slick-slide {
+    width: 324px;
+    @include mq(sp) {
+      width: 274px;
+    }
+  }
+}
+.introduction__slide {
+  padding-inline: 12px;
 }

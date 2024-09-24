@@ -46,3 +46,50 @@ $(function () {
     }
   });
 });
+
+//紹介文の画像一つずつフェードイン
+$(function () {
+  $(".fade-up").on("inview", function (event, isInView) {
+    if (isInView) {
+      $(this).stop().addClass("is-show");
+    }
+  });
+});
+
+//活動紹介のタブ
+$(function () {
+  let tabs = $(".introduction__tab");
+  $(".introduction__tab").on("click", function (e) {
+    e.preventDefault();
+    $(".introduction__tab").removeClass("selected");
+    $(this).addClass("selected");
+    const index = tabs.index(this);
+    $(".introduction__area").removeClass("show").eq(index).addClass("show");
+    $(".introduction__slider").slick("setPosition");
+  });
+});
+
+//活動紹介のスライダー
+$(".introduction__slider").slick({
+  autoplay: true,
+  autoplaySpeed: 0,
+  speed: 2000,
+  infinite: true,
+  cssEase: "linear",
+  swipe: false,
+  pauseOnHover: false,
+  pauseOnFocus: false,
+  arrows: false,
+  dots: false,
+  variableWidth: true,
+});
+
+//よくあるご質問のアコーディオン
+$(function () {
+  $(".faq__question").on("click", function () {
+    $(this).next(".faq__answer").slideToggle();
+    $(this).next(".faq__answer").css("display", "flex");
+    $(this).parent(".faq__item").toggleClass("opened");
+    $(".faq__answer").not($(this)).next().slideUp();
+  });
+});

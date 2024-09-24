@@ -1,0 +1,17 @@
+@use "../foundation/" as *;
+
+.fade-up {
+  opacity: 0;
+  translate: 0 100px;
+  transition: 1s all ease;
+  &.is-show {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+.delay-500ms {
+  transition-delay: 0.5s;
+}
+.delay-1000ms {
+  transition-delay: 1s;
+}
