@@ -19,21 +19,6 @@ $(document).ready(function () {
   //aタグの遷移ずれ
   //*cssのscroll-behavior: smooth; との併用は不可→scroll-behavior: smooth;を削除
   $(function () {
-    // スムーズスクロールの処理
-    $('a[href*="#"]').click(function (e) {
-      var target = $(this.hash === "" ? "html" : this.hash);
-      if (target.length) {
-        e.preventDefault();
-        var headerHeight = $(".header").outerHeight();
-        var position = target.offset().top - headerHeight - 40;
-        $("html, body").animate({ scrollTop: position }, 500, "swing");
-        if (!target.is("html")) {
-          // URLにハッシュを含める
-          history.pushState(null, "", this.hash);
-        }
-      }
-    });
-
     // ページ読み込み時にハッシュがある場合の処理
     if (window.location.hash) {
       var target = $(window.location.hash);
@@ -147,5 +132,21 @@ $(document).ready(function () {
       $(this).slideUp();
       $(this).prev(".contact-option").removeClass("clicked");
     });
+  }); // スムーズスクロールの処理
+  $('a[href*="#"]').click(function (e) {
+    if ($(this).hasClass("introduction__tab")) {
+      return;
+    }
+    var target = $(this.hash === "" ? "html" : this.hash);
+    if (target.length) {
+      e.preventDefault();
+      var headerHeight = $(".header").outerHeight();
+      var position = target.offset().top - headerHeight - 40;
+      $("html, body").animate({ scrollTop: position }, 500, "swing");
+      if (!target.is("html")) {
+        // URLにハッシュを含める
+        history.pushState(null, "", this.hash);
+      }
+    }
   });
 });
