@@ -3,10 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <?php get_template_part('template-parts'); ?>
+    <?php get_template_part('template-parts/meta-data'); ?>
     <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
     <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/img/apple-touch-icon.webp" sizes="180x180">
     <link rel="icon" type="image/webp" href="<?php echo get_template_directory_uri(); ?>/img/android-touch-icon.webp" sizes="192x192">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
     <?php wp_head(); ?>
   </head>
   <body>

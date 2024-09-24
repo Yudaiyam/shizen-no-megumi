@@ -146,7 +146,8 @@ html {
 }
 
 body {
-  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
+    "游ゴシック", "Yu Gothic", sans-serif;
   overflow-x: hidden;
   background-color: #f9f9f9;
 }
@@ -293,7 +294,8 @@ a {
   color: #fff;
 }
 .btn-ja {
-  font-family: "Yu Gothic", "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Meiryo", sans-serif;
+  font-family: "Yu Gothic", "Helvetica Neue", "Helvetica", "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN", "Arial", "Meiryo", sans-serif;
   font-weight: bold;
 }
 
@@ -604,7 +606,7 @@ a {
 .fv {
   width: 100%;
   height: clamp(600px, 100vh, 768px);
-  background: url("../img/FV.jpg") center/cover no-repeat;
+  background: url("../img/FV.webp") center/cover no-repeat;
   background-attachment: fixed;
   position: relative;
   z-index: 0;
@@ -1155,7 +1157,8 @@ a {
   }
 }
 .faq__question h3 {
-  font-family: "Yu Gothic", "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Meiryo", sans-serif;
+  font-family: "Yu Gothic", "Helvetica Neue", "Helvetica", "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN", "Arial", "Meiryo", sans-serif;
   font-size: 20px;
   font-weight: bold;
   line-height: 1.5;
@@ -1397,16 +1400,16 @@ a {
     padding-top: 30px;
   }
 }
-.access__table tr:nth-child(n+1):nth-child(-n+4) td {
+.access__table tr:nth-child(n + 1):nth-child(-n + 4) td {
   padding-left: 50px;
 }
 @media screen and (max-width: 767px) {
-  .access__table tr:nth-child(n+1):nth-child(-n+4) td {
+  .access__table tr:nth-child(n + 1):nth-child(-n + 4) td {
     padding-left: 20px;
     padding-top: 24px;
   }
 }
-.access__table tr:nth-child(n+2):nth-child(-n+4) th {
+.access__table tr:nth-child(n + 2):nth-child(-n + 4) th {
   padding-top: 24px;
 }
 .access__table tr:nth-child(4) th {
@@ -2270,4 +2273,4 @@ a {
   font-size: 12px;
   letter-spacing: 0.05em;
   text-align: center;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
