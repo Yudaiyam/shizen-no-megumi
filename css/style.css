@@ -139,7 +139,6 @@ table {
 }
 
 html {
-  scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -1138,6 +1137,7 @@ a {
   padding: 0;
   position: relative;
   width: 100%;
+  cursor: pointer;
 }
 @media screen and (max-width: 767px) {
   .faq__question {
@@ -1999,6 +1999,7 @@ a {
   margin-bottom: 36px;
   line-height: 1.5;
   color: #555555;
+  position: relative;
 }
 
 .contact-label {
@@ -2040,13 +2041,19 @@ a {
 .contact-option {
   width: min(29.2825768668vw, 400px);
   color: #cbcbcb;
+  font-size: 16px;
+  font-weight: 500;
   position: relative;
-  padding-inline: 20px;
+  padding: 14px 20px;
+  cursor: pointer;
 }
 @media screen and (max-width: 767px) {
   .contact-option {
     width: 100%;
   }
+}
+.contact-option.clicked:before {
+  rotate: 180deg;
 }
 .contact-option:before {
   position: absolute;
@@ -2058,18 +2065,43 @@ a {
   top: 50%;
   right: 20px;
   translate: 0 -50%;
+  transition: all 0.3s ease;
 }
-.contact-option select {
-  border: none;
-  width: 100%;
-  height: 100%;
-  color: #cbcbcb;
-  background-color: transparent;
-  appearance: none;
+
+.contact-select {
+  border: 1px solid #93c572;
+  border-radius: 5px;
+  color: #93c572;
+  background-color: #f9f9f9;
+  padding: 0 5px;
+  position: absolute;
+  bottom: 0;
+  translate: 0 100%;
+  left: 0;
+  z-index: 1;
+  width: min(29.2825768668vw, 400px);
+  display: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .contact-select {
+    width: 100%;
+  }
+}
+.contact-select span {
+  display: block;
+  padding: 15px;
+  border-bottom: 1px dashed #707070;
+  font-size: 16px;
+  font-weight: bold;
+  color: #93c572;
+  transition: all 0.3s ease;
+}
+.contact-select span:last-child {
   border: none;
 }
-.contact-option select:focus-visible {
-  border: none;
+.contact-select span:hover {
+  opacity: 0.5;
 }
 
 .contact-message {
