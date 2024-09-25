@@ -98,7 +98,7 @@
 }
 .introduction__slider {
   display: none;
-  &.slick-initialize {
+  &.slick-initialized {
     display: block;
   }
   .slick-list {

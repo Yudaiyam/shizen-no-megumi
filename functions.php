@@ -38,6 +38,18 @@
     }
     add_filter( 'register_post_type_args', 'post_has_archive', 10, 2 );
 
+     // パンくずリストの「一覧ページ」カスタマイズここから
+     function override_yoast_breadcrumb($links)
+     {
+       if (!is_page()) {
+         $news_url = home_url('/news');
+         $add_link[] = array('text' => 'お知らせ一覧', 'url' => $news_url);
+         array_splice($links, 1, 0, $add_link);
+       }
+       return $links;
+     }
+     add_filter('wpseo_breadcrumb_links', 'override_yoast_breadcrumb');
+
   // Contact Form 7で自動挿入されるPタグ、brタグを削除
   add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
   function wpcf7_autop_return_false() {
@@ -52,3 +64,11 @@
     return $slug;
     }
     add_filter( 'wp_unique_post_slug', 'auto_post_slug', 10, 4 );
+
+    //使用しない画像の自動生成解除
+    add_image_size('thumbnail', 0, 0);
+    add_image_size('medium', 0, 0);
+    add_image_size('medium_large', 0, 0);
+    add_image_size('large', 0, 0);
+    add_image_size('1536x1536', 0, 0);
+    add_image_size('2048x2048', 0, 0);

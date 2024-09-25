@@ -19,21 +19,6 @@ $(document).ready(function () {
   //aタグの遷移ずれ
   //*cssのscroll-behavior: smooth; との併用は不可→scroll-behavior: smooth;を削除
   $(function () {
-    // スムーズスクロールの処理
-    $('a[href*="#"]').click(function (e) {
-      var target = $(this.hash === "" ? "html" : this.hash);
-      if (target.length) {
-        e.preventDefault();
-        var headerHeight = $(".header").outerHeight();
-        var position = target.offset().top - headerHeight - 40;
-        $("html, body").animate({ scrollTop: position }, 500, "swing");
-        if (!target.is("html")) {
-          // URLにハッシュを含める
-          history.pushState(null, "", this.hash);
-        }
-      }
-    });
-
     // ページ読み込み時にハッシュがある場合の処理
     if (window.location.hash) {
       var target = $(window.location.hash);
@@ -147,5 +132,72 @@ $(document).ready(function () {
       $(this).slideUp();
       $(this).prev(".contact-option").removeClass("clicked");
     });
+  });
+
+  // お知らせ詳細ページの目次生成
+  $(document).ready(function () {
+    function generateToc() {
+      var $tocInner = $(".toc__inner");
+      $("article h2, article h3").each(function (index) {
+        var $this = $(this);
+        var tag = $this.prop("tagName").toLowerCase();
+        var id = "h" + tag.charAt(1) + "-" + (index + 1);
+        $this.attr("id", id);
+
+        if (tag === "h2") {
+          $tocInner.append(
+            '<li><a href="#' +
+              id +
+              '" class="toc__h2">' +
+              $this.text() +
+              "</a><ul></ul></li>"
+          );
+        } else if (tag === "h3") {
+          $tocInner
+            .find("li:last ul")
+            .append(
+              '<li><a href="#' +
+                id +
+                '" class="toc__h3">' +
+                $this.text() +
+                "</a></li>"
+            );
+        }
+      });
+    }
+    generateToc();
+
+    $(".toc a").on("click", function (event) {
+      event.preventDefault(); // デフォルトのリンク動作を無効化
+
+      var target = $(this.getAttribute("href")); // クリックされたリンクのターゲット取得
+      if (target.length) {
+        var headerHeight = $(".header").outerHeight();
+        var position = target.offset().top - headerHeight - 40;
+        $("html, body").animate({ scrollTop: position }, 500, "swing");
+        if (!target.is("html")) {
+          // URLにハッシュを含める
+          history.pushState(null, "", this.hash);
+        }
+      }
+    });
+  });
+
+  // スムーズスクロールの処理
+  $('a[href*="#"]').click(function (e) {
+    if ($(this).hasClass("introduction__tab")) {
+      return;
+    }
+    var target = $(this.hash === "" ? "html" : this.hash);
+    if (target.length) {
+      e.preventDefault();
+      var headerHeight = $(".header").outerHeight();
+      var position = target.offset().top - headerHeight - 40;
+      $("html, body").animate({ scrollTop: position }, 500, "swing");
+      if (!target.is("html")) {
+        // URLにハッシュを含める
+        history.pushState(null, "", this.hash);
+      }
+    }
   });
 });

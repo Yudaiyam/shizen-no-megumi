@@ -14,20 +14,35 @@
             自然の恵みを感じ、<br class="fv__catch-break" />豊かな未来を。
           </h1>
         </div>
-        <a href="#about" class="fv__scroll"> scroll</a>
-        <article>
-          <a href="./single.html" class="fv__news">
-            <div class="fv__news-info">
-              <h2 class="fv__news-heading">news</h2>
-              <time class="fv__news-date" datetime="YYYY-MM-DD"
-                >YYYY.MM.DD</time
-              >
-            </div>
-            <h3 class="fv__news-title">
-              タイトルが入ります。タイトルが入ります。
-            </h3>
-          </a>
-        </article>
+        <a href="#about" class="fv__scroll">scroll</a>
+        <?php 
+           $args = array(
+            'paged' => $paged,
+            'posts_per_page' => 1,
+            'post_type' => 'post',
+          );
+          $query = new WP_Query($args);
+            if($query->have_posts()){
+            while ($query->have_posts()) {
+                $query->the_post();
+                ?>
+            <article>
+              <a href="<?php the_permalink(); ?>" class="fv__news">
+                <div class="fv__news-info">
+                  <h2 class="fv__news-heading">news</h2>
+                  <time class="fv__news-date" datetime="<?php echo get_the_time('Y-m-d'); ?>"
+                    ><?php echo get_the_time('Y.m.d'); ?></time
+                  >
+                </div>
+                <h3 class="fv__news-title">
+                  <?php the_title(); ?>
+                </h3>
+              </a>
+            </article>
+            <?php
+            }
+          wp_reset_postdata();
+        } ?>
       </div>
       <section>
         <div class="about container" id="about">
@@ -465,66 +480,51 @@
               季節の農作物のお知らせ、見学ツアーのご案内、<br class="pc-only" />
               オンライン販売セールのお知らせなど、自然の恵み農園の最新情報をお届けします。
             </p>
-            <a href="<?php esc_url(home_url('/news')); ?>" class="top-news__btn btn pc-only"
+            <a href="<?php echo esc_url(home_url('/news')); ?>" class="top-news__btn btn pc-only"
               >view more</a
             >
           </div>
           <div class="top-news__inner">
             <ul>
+            <?php 
+              $args = array(
+                  'posts_per_page' => 3,
+                  'post_type' => 'post',
+                  'orderby' => 'date',
+                  'order' => 'DESC',
+              );
+              $query = new WP_Query($args);
+              if($query->have_posts()){
+                  while($query->have_posts()){
+                      $query->the_post(); ?>
               <li>
                 <article>
-                  <a href="./single.html" class="top-news__article">
+                  <a href="<?php the_permalink(); ?>" class="top-news__article">
                     <div class="top-news__article-info">
-                      <time class="top-news__article-date" datetime="YYYY-MM-DD"
-                        >YYYY.MM.DD</time
+                      <time class="top-news__article-date" datetime="<?php echo get_the_time('Y-m-d') ?>"
+                        ><?php echo get_the_time('Y.m.d') ?></time
                       >
-                      <div class="top-new__article-cats">
-                        <p class="top-news__article-cat">カテゴリー</p>
-                      </div>
+                      <?php 
+                        $cats = get_the_category();
+                        echo '<div class="top-new__article-cats">';
+                        foreach($cats as $cat){
+                          echo '<p class="top-news__article-cat">' . $cat->name . '</p>';
+                        }
+                        echo '</div>';
+                      ?>
                     </div>
                     <h3 class="top-news__article-title">
-                      タイトルが入ります。タイトルが入ります。タイトルが入ります。
+                      <?php the_title(); ?>
                     </h3>
                   </a>
                 </article>
               </li>
-              <li>
-                <article>
-                  <a href="./single.html" class="top-news__article">
-                    <div class="top-news__article-info">
-                      <time class="top-news__article-date" datetime="YYYY-MM-DD"
-                        >YYYY.MM.DD</time
-                      >
-                      <div class="top-new__article-cats">
-                        <p class="top-news__article-cat">カテゴリー</p>
-                      </div>
-                    </div>
-                    <h3 class="top-news__article-title">
-                      タイトルが入ります。タイトルが入ります。タイトルが入ります。
-                    </h3>
-                  </a>
-                </article>
-              </li>
-              <li>
-                <article>
-                  <a href="./single.html" class="top-news__article">
-                    <div class="top-news__article-info">
-                      <time class="top-news__article-date" datetime="YYYY-MM-DD"
-                        >YYYY.MM.DD</time
-                      >
-                      <div class="top-new__article-cats">
-                        <p class="top-news__article-cat">カテゴリー</p>
-                      </div>
-                    </div>
-                    <h3 class="top-news__article-title">
-                      タイトルが入ります。タイトルが入ります。タイトルが入ります。
-                    </h3>
-                  </a>
-                </article>
-              </li>
+              <?  }
+                wp_reset_postdata();
+              } ?>
             </ul>
           </div>
-          <a href="<?php esc_url(home_url('/news')); ?>" class="top-news__btn btn sp-only"
+          <a href="<?php echo esc_url(home_url('/news')); ?>" class="top-news__btn btn sp-only"
             >view more</a
           >
         </div>

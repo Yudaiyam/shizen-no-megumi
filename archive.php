@@ -1,125 +1,105 @@
 <?php get_header(); ?>
 <main>
       <div class="page-top container">
-        <p class="breadcrumb">
-          ホーム<i class="breadcrumb-arrow fa-solid fa-chevron-right"></i
-          >お知らせ一覧
-        </p>
+        <?php
+          if ( function_exists('yoast_breadcrumb') ) {
+            yoast_breadcrumb( '<p id="breadcrumbs" class="breadcrumb">','</p>' );
+          }
+        ?>
         <h1 class="section__heading page__heading">お知らせ一覧</h1>
       </div>
       <div class="tabs-container container">
-        <a href="#" class="tab selected">すべて</a>
-        <a href="#" class="tab">カテゴリー1</a>
-        <a href="#" class="tab">カテゴリー2</a>
-        <a href="#" class="tab">カテゴリー3</a>
+        <a href="<?php echo esc_url(home_url('/news')); ?>" class="tab selected">すべて</a>
+        <?php  ?>
+        <?php
+            $cats = get_categories();
+            foreach ($cats as $cat) {
+                $category_link = esc_url(get_category_link($cat->term_id));
+                $category_name = esc_html($cat->name);
+                echo '<a href="' . $category_link . '" class="tab">' . $category_name . '</a>';
+            }
+            ?>
       </div>
       <section>
         <div class="archive__inner container">
           <ul class="archive__list">
-            <li>
-              <article>
-                <a href="./single.html" class="archive__item">
-                  <div class="archive__thumbnail">
-                    <img
-                      src="./img/no-image.webp"
-                      width="230"
-                      height="150"
-                      loading="lazy"
-                      alt="タイトルが入ります。タイトルが入ります。"
-                    />
-                  </div>
-                  <div class="archive__text">
-                    <div class="archive__info">
-                      <time datetime="YYYY-MM-DD" class="archive__time"
-                        >YYYY.MM.DD</time
-                      >
-                      <div class="archive__cat-wrapper">
-                        <p class="archive__cat-item">カテゴリ</p>
+          <?php
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+            $args = array(
+                'paged' => $paged,
+                'posts_per_page' => 5,
+                'post_type' => 'post',
+            );
+            $query = new WP_Query($args);
+            if($query->have_posts()){
+              while ($query->have_posts()) {
+                  $query->the_post();
+                  ?>
+                <li>
+                  <article>
+                    <a href="<?php the_permalink(); ?>" class="archive__item">
+                      <?php
+                        $thumbnail_id = SCF::get('thumbnail');
+                        $thumbnail_data = wp_get_attachment_image_src($thumbnail_id, 'large');
+                        $url = $thumbnail_data[0];
+                        $alt = get_the_title();
+                        if ($thumbnail_id) {
+                          echo '<div class="archive__thumbnail"><img src="' . esc_url($url) . '" alt="' . esc_attr($alt) . '"/></div>';
+                        } else {
+                            $no_image = get_template_directory_uri() . "/img/no-image.webp";
+                            echo '<div class="archive__thumbnail"><img src="' . $no_image . '" alt="' . get_the_title() . '" /></div>';
+                          }
+                      ?>
+                      <div class="archive__text">
+                        <div class="archive__info">
+                          <time datetime="<?php echo get_the_time('Y-m-d'); ?>" class="archive__time"
+                            ><?php echo get_the_time('Y.m.d'); ?></time
+                          >
+                          <?php 
+                            $cats = get_the_category();
+                            echo '<div class="archive__cat-wrappe">';
+                            foreach($cats as $cat){
+                              echo '<p class="archive__cat-item">' . $cat->name . '</p>';
+                            }
+                            echo '</div>';
+                          ?>
+                        </div>
+                        <h2 class="archive__title">
+                          <?php the_title(); ?>
+                        </h2>
+                          <?php 
+                          $sections = SCF::get('single-section');
+                          foreach($sections as $section){
+                            echo '<p class="archive__excerpt">' . $section['single-section__paragraph'] . '</p>';
+                            break;
+                          }
+                          ?>
                       </div>
-                    </div>
-                    <h2 class="archive__title">
-                      タイトルが入ります。タイトルが入ります。タイトルが入ります。
-                    </h2>
-                    <p class="archive__excerpt">
-                      本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。
-                    </p>
-                  </div>
-                </a>
-              </article>
-            </li>
-            <li>
-              <article>
-                <a href="./single.html" class="archive__item">
-                  <div class="archive__thumbnail">
-                    <img
-                      src="./thumbnail/AdobeStock_105054722.jpeg"
-                      width="230"
-                      height="150"
-                      loading="lazy"
-                      alt="タイトルが入ります。タイトルが入ります。"
-                    />
-                  </div>
-                  <div class="archive__text">
-                    <div class="archive__info">
-                      <time datetime="YYYY-MM-DD" class="archive__time"
-                        >YYYY.MM.DD</time
-                      >
-                      <div class="archive__cat-wrapper">
-                        <p class="archive__cat-item">カテゴリ</p>
-                      </div>
-                    </div>
-                    <h2 class="archive__title">
-                      タイトルが入ります。タイトルが入ります。タイトルが入ります。
-                    </h2>
-                    <p class="archive__excerpt">
-                      本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。
-                    </p>
-                  </div>
-                </a>
-              </article>
-            </li>
-            <li>
-              <article>
-                <a href="./single.html" class="archive__item">
-                  <div class="archive__thumbnail">
-                    <img
-                      src="./thumbnail/AdobeStock_233137379.jpeg"
-                      width="230"
-                      height="150"
-                      loading="lazy"
-                      alt="タイトルが入ります。タイトルが入ります。"
-                    />
-                  </div>
-                  <div class="archive__text">
-                    <div class="archive__info">
-                      <time datetime="YYYY-MM-DD" class="archive__time"
-                        >YYYY.MM.DD</time
-                      >
-                      <div class="archive__cat-wrapper">
-                        <p class="archive__cat-item">カテゴリ</p>
-                      </div>
-                    </div>
-                    <h2 class="archive__title">
-                      タイトルが入ります。タイトルが入ります。タイトルが入ります。
-                    </h2>
-                    <p class="archive__excerpt">
-                      本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。
-                    </p>
-                  </div>
-                </a>
-              </article>
-            </li>
+                    </a>
+                  </article>
+                </li>
+                <?php 
+                  }
+                ?>
           </ul>
-          <div class="pagination">
-            <a href="#" class="pagination-number">
-              <i class="arrow fa-solid fa-chevron-left"></i>
-            </a>
-            <a href="#" class="pagination-number"> 1 </a>
-            <a href="#" class="pagination-number"> 2 </a>
-            <a href="#" class="pagination-number">
-              <i class="fa-solid fa-chevron-right"></i>
-            </a>
+          <?php
+          echo '<div class="pagination">';
+            $total_pages = $query->max_num_pages;
+            if ($total_pages > 1) {
+              // ページネーション作成関数
+              echo paginate_links(array(
+                  'total' => $total_pages,
+                  'current' => $paged,
+                  'mid_size' => 2,
+                  'prev_text' => '<i class="fa-solid fa-chevron-left"></i>',
+                  'next_text' => '<i class="fa-solid fa-chevron-right"></i>',
+              ));
+          }  ?>
           </div>
+          <?php 
+            }
+            wp_reset_postdata();
+          ?>
         </div>
       </section>
       <?php get_template_part('section-contact'); ?>

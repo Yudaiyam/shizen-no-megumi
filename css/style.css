@@ -146,8 +146,7 @@ html {
 }
 
 body {
-  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
-    "游ゴシック", "Yu Gothic", sans-serif;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
   overflow-x: hidden;
   background-color: #f9f9f9;
 }
@@ -294,8 +293,7 @@ a {
   color: #fff;
 }
 .btn-ja {
-  font-family: "Yu Gothic", "Helvetica Neue", "Helvetica", "Hiragino Sans",
-    "Hiragino Kaku Gothic ProN", "Arial", "Meiryo", sans-serif;
+  font-family: "Yu Gothic", "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Meiryo", sans-serif;
   font-weight: bold;
 }
 
@@ -319,6 +317,9 @@ a {
   .breadcrumb {
     margin-bottom: 36px;
   }
+}
+.breadcrumb span {
+  display: inline-block;
 }
 
 .breadcrumb-arrow {
@@ -1047,7 +1048,7 @@ a {
 .introduction__slider {
   display: none;
 }
-.introduction__slider.slick-initialize {
+.introduction__slider.slick-initialized {
   display: block;
 }
 .introduction__slider .slick-list {
@@ -1157,8 +1158,7 @@ a {
   }
 }
 .faq__question h3 {
-  font-family: "Yu Gothic", "Helvetica Neue", "Helvetica", "Hiragino Sans",
-    "Hiragino Kaku Gothic ProN", "Arial", "Meiryo", sans-serif;
+  font-family: "Yu Gothic", "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Meiryo", sans-serif;
   font-size: 20px;
   font-weight: bold;
   line-height: 1.5;
@@ -1400,16 +1400,16 @@ a {
     padding-top: 30px;
   }
 }
-.access__table tr:nth-child(n + 1):nth-child(-n + 4) td {
+.access__table tr:nth-child(n+1):nth-child(-n+4) td {
   padding-left: 50px;
 }
 @media screen and (max-width: 767px) {
-  .access__table tr:nth-child(n + 1):nth-child(-n + 4) td {
+  .access__table tr:nth-child(n+1):nth-child(-n+4) td {
     padding-left: 20px;
     padding-top: 24px;
   }
 }
-.access__table tr:nth-child(n + 2):nth-child(-n + 4) th {
+.access__table tr:nth-child(n+2):nth-child(-n+4) th {
   padding-top: 24px;
 }
 .access__table tr:nth-child(4) th {
@@ -1614,12 +1614,13 @@ a {
 .archive__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: start;
   gap: 50px;
   margin-bottom: 50px;
 }
 @media screen and (max-width: 767px) {
   .archive__list {
+    justify-content: center;
     gap: 30px;
     margin-bottom: 30px;
   }
@@ -1640,6 +1641,8 @@ a {
 
 .archive__thumbnail {
   width: 230px;
+  height: 150px;
+  overflow: hidden;
   flex-shrink: 0;
   border-radius: 20px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
@@ -1648,6 +1651,7 @@ a {
 @media screen and (max-width: 767px) {
   .archive__thumbnail {
     width: 100%;
+    height: auto;
   }
 }
 
@@ -1747,7 +1751,7 @@ a {
   align-items: center;
 }
 
-.pagination-number {
+.page-numbers {
   width: 50px;
   height: 50px;
   background-color: #fafafa;
@@ -1760,7 +1764,7 @@ a {
   justify-content: center;
   align-items: center;
 }
-.pagination-number .arrow {
+.page-numbers .arrow {
   font-family: "Font Awesome 6 Free", sans-serif;
   font-weight: 900;
 }
@@ -1825,6 +1829,14 @@ a {
   .single__container {
     padding: 30px 0;
     margin-bottom: 80px;
+  }
+}
+.single__container section {
+  min-height: 300px;
+}
+@media screen and (max-width: 767px) {
+  .single__container section {
+    min-height: auto;
   }
 }
 
@@ -2273,4 +2285,4 @@ a {
   font-size: 12px;
   letter-spacing: 0.05em;
   text-align: center;
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

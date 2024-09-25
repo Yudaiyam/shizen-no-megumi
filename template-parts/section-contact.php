@@ -5,7 +5,7 @@
             お仕事のご相談、農園体験、牧場の見学、その他ご質問<br />
             お気軽にお問い合わせください。
           </p>
-          <a href="<?php esc_url(home_url('/contact')); ?>" class="section-contact__btn btn btn-ja"
+          <a href="<?php echo esc_url(home_url('/contact')); ?>" class="section-contact__btn btn btn-ja"
             >お問い合わせ</a
           >
           <p class="section-contact__bottom">

@@ -15,6 +15,9 @@
   @include mq(sp) {
     margin-bottom: 36px;
   }
+  span {
+    display: inline-block;
+  }
 }
 .breadcrumb-arrow {
   color: $primary;

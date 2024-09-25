@@ -50,6 +50,12 @@
     padding: 30px 0;
     margin-bottom: 80px;
   }
+  section {
+    min-height: 300px;
+    @include mq(sp) {
+      min-height: auto;
+    }
+  }
 }
 .single__thumbnail {
   width: 100%;

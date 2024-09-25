@@ -17,7 +17,7 @@
   </head>
   <body>
     <header class="header">
-      <a href="<?php esc_url(home_url('/')); ?>" class="header__logo">
+      <a href="<?php echo esc_url(home_url('/')); ?>" class="header__logo">
         <img
           src="<?php echo get_template_directory_uri(); ?>/img/logo.svg"
           width="170"
@@ -33,32 +33,32 @@
       <nav class="header__menu">
         <ul>
           <li>
-            <a href="<?php esc_url(home_url('/')); ?>" class="header__link"
+            <a href="<?php echo esc_url(home_url('/')); ?>" class="header__link"
               >トップ<span class="sp-only">top</span></a
             >
           </li>
           <li>
-            <a href="<?php esc_url(home_url('/')); ?>#about" class="header__link"
+            <a href="<?php echo esc_url(home_url('/')); ?>#about" class="header__link"
               >私たちについて<span class="sp-only">about</span></a
             >
           </li>
           <li>
-            <a href="<?php esc_url(home_url('/')); ?>#introduction" class="header__link"
+            <a href="<?php echo esc_url(home_url('/')); ?>#introduction" class="header__link"
               >活動紹介<span class="sp-only">works</span></a
             >
           </li>
           <li>
-            <a href="<?php esc_url(home_url('/')); ?>#faq" class="header__link"
+            <a href="<?php echo esc_url(home_url('/')); ?>#faq" class="header__link"
               >よくあるご質問<span class="sp-only">faq</span></a
             >
           </li>
           <li>
-            <a href="<?php esc_url(home_url('/news')); ?>" class="header__link"
+            <a href="<?php echo esc_url(home_url('/news')); ?>" class="header__link"
               >お知らせ<span class="sp-only">news</span></a
             >
           </li>
           <li>
-            <a href="<?php esc_url(home_url('/')); ?>#access" class="header__link"
+            <a href="<?php echo esc_url(home_url('/')); ?>#access" class="header__link"
               >アクセス<span class="sp-only">access</span></a
             >
           </li>
@@ -71,7 +71,7 @@
             </div>
           </li>
           <li>
-            <a href="<?php esc_url(home_url('/contact')); ?>" class="header__link--contact"
+            <a href="<?php echo esc_url(home_url('/contact')); ?>" class="header__link--contact"
               >お問い合わせ</a
             >
           </li>

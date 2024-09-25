@@ -53,10 +53,11 @@
 .archive__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: start;
   gap: 50px;
   margin-bottom: 50px;
   @include mq(sp) {
+    justify-content: center;
     gap: 30px;
     margin-bottom: 30px;
   }
@@ -73,12 +74,15 @@
 }
 .archive__thumbnail {
   width: 230px;
+  height: 150px;
+  overflow: hidden;
   flex-shrink: 0;
   border-radius: 20px;
   box-shadow: 0px 3px 6px #00000029;
   overflow: hidden;
   @include mq(sp) {
     width: 100%;
+    height: auto;
   }
 }
 .archive__text {
@@ -161,7 +165,7 @@
   justify-content: center;
   align-items: center;
 }
-.pagination-number {
+.page-numbers {
   width: 50px;
   height: 50px;
   background-color: #fafafa;

@@ -1,7 +1,7 @@
 <footer class="footer">
       <div class="footer__container container">
         <div class="footer__info">
-          <a href="<?php esc_url(home_url('/')); ?>" class="footer__logo">
+          <a href="<?php echo esc_url(home_url('/')); ?>" class="footer__logo">
             <img
               src="<?php echo get_template_directory_uri(); ?>/img/logo.svg"
               width="202"
@@ -24,28 +24,28 @@
           <nav class="footer__menu">
             <ul>
               <li>
-                <a href="<?php esc_url(home_url('/')); ?>" class="footer__link-item">ホーム</a>
+                <a href="<?php echo esc_url(home_url('/')); ?>" class="footer__link-item">ホーム</a>
               </li>
               <li>
-                <a href="<?php esc_url(home_url('/')); ?>#about" class="footer__link-item"
+                <a href="<?php echo esc_url(home_url('/')); ?>#about" class="footer__link-item"
                   >私たちについて</a
                 >
               </li>
               <li>
-                <a href="<?php esc_url(home_url('/')); ?>#introduction" class="footer__link-item"
+                <a href="<?php echo esc_url(home_url('/')); ?>#introduction" class="footer__link-item"
                   >活動紹介</a
                 >
               </li>
               <li>
-                <a href="<?php esc_url(home_url('/')); ?>#faq" class="footer__link-item"
+                <a href="<?php echo esc_url(home_url('/')); ?>#faq" class="footer__link-item"
                   >よくあるご質問</a
                 >
               </li>
               <li>
-                <a href="<?php esc_url(home_url('/news')); ?>" class="footer__link-item">お知らせ</a>
+                <a href="<?php echo esc_url(home_url('/news')); ?>" class="footer__link-item">お知らせ</a>
               </li>
               <li>
-                <a href="<?php esc_url(home_url('/')); ?>#access" class="footer__link-item"
+                <a href="<?php echo esc_url(home_url('/')); ?>#access" class="footer__link-item"
                   >アクセス</a
                 >
               </li>
