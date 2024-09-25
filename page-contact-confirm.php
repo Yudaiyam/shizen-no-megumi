@@ -11,44 +11,7 @@
       <section>
         <div class="contact__inner container">
           <div class="contact__container">
-            <form action="">
-              <div class="contact-item">
-                <label for="your-option" class="contact-label">
-                  お問い合わせ種別<span class="required">必須</span>
-                </label>
-                <div class="">その他</div>
-              </div>
-              <div class="contact-item">
-                <label for="your-name" class="contact-label">
-                  お名前<span class="required">必須</span>
-                </label>
-                山田太郎
-              </div>
-              <div class="contact-item">
-                <label for="your-email" class="contact-label">
-                  メールアドレス
-                  <span class="required">必須</span>
-                </label>
-                Tarou.yamada@gmail.com
-              </div>
-              <div class="contact-item">
-                <label for="your-tel" class="contact-label"> 電話番号 </label>
-                080-1234-5678
-              </div>
-              <div class="contact-item">
-                <label for="your-message" class="contact-label">
-                  お問い合わせ内容<span class="required">必須</span></label
-                >
-                お問い合わせ内容が入ります。お問い合わせ内容が入ります。お問い合わせ内容が入ります。お問い合わせ内容が入ります。お問い合わせ内容が入ります。お問い合わせ内容が入ります。お問い合わせ内容が入ります。お問い合わせ内容が入ります。お問い合わせ内容が入ります。
-              </div>
-              <button
-                type="submit"
-                class="contact-submit btn btn-ja"
-                value="送信"
-              >
-                送信
-              </button>
-            </form>
+            <?php echo do_shortcode('[contact-form-7 id="cb64fc2" title="確認画面"]'); ?>
           </div>
         </div>
       </section>
