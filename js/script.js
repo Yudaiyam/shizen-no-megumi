@@ -183,21 +183,111 @@ $(document).ready(function () {
     });
   });
 
-  // スムーズスクロールの処理
-  $('a[href*="#"]').click(function (e) {
-    if ($(this).hasClass("introduction__tab")) {
+  // ページが読み込まれたときに選択肢をリセット（CSSや内部状態の初期化）
+  $(".custom-select-trigger").text("選択してください"); // 初期表示を設定
+  $("select").val("default");
+  $(".custom-options .custom-option").removeClass("selection");
+  $(".custom-select-trigger").css("color", "#CBCBCB");
+
+  // ドロップダウンメニューの生成
+  $(".contact-select").each(function () {
+    var $this = $(this);
+    var template = '<div class="custom-select">';
+    template += '<span class="custom-select-trigger">選択してください</span>';
+    template += '<div class="custom-options">';
+    $this.find("span").each(function () {
+      var value = $(this).text();
+      template +=
+        '<span class="custom-option" data-value="' +
+        value +
+        '">' +
+        value +
+        "</span>";
+    });
+    template += "</div></div>";
+
+    $this.wrap('<div class="custom-select-wrapper"></div>');
+    $this.hide();
+    $this.after(template);
+  });
+
+  // ドロップダウンを開閉する処理
+  $(document).on("click", ".custom-select-trigger", function () {
+    $(this).parents(".custom-select").toggleClass("opened");
+  });
+
+  // オプションがクリックされた時の処理
+  $(document).on("click", ".custom-option", function () {
+    var selectedValue = $(this).data("value");
+
+    // 「選択してください」は一度選択された後に選べないようにする
+    if ($(this).hasClass("disabled") || selectedValue === "default") {
       return;
     }
-    var target = $(this.hash === "" ? "html" : this.hash);
-    if (target.length) {
-      e.preventDefault();
-      var headerHeight = $(".header").outerHeight();
-      var position = target.offset().top - headerHeight - 40;
-      $("html, body").animate({ scrollTop: position }, 500, "swing");
-      if (!target.is("html")) {
-        // URLにハッシュを含める
-        history.pushState(null, "", this.hash);
-      }
+
+    var triggerText = $(this).text();
+    $(this).parents(".custom-select-wrapper").find("select").val(selectedValue);
+    $(this)
+      .parents(".custom-options")
+      .find(".custom-option")
+      .removeClass("selection");
+    $(this).addClass("selection");
+    $(this).parents(".custom-select").removeClass("opened");
+    $(this)
+      .parents(".custom-select")
+      .find(".custom-select-trigger")
+      .text(triggerText);
+
+    // テキスト色を変更
+    $(".custom-select-trigger").css("color", "#000");
+
+    // 「選択してください」を無効化する
+    $(".custom-options .custom-option[data-value='default']").addClass(
+      "disabled"
+    );
+  });
+
+  // ページ外クリック時にドロップダウンを閉じる
+  $(document).on("click", function (e) {
+    if (!$(e.target).closest(".custom-select").length) {
+      $(".custom-select").removeClass("opened");
     }
   });
+
+  // Contact Form 7で「選択してください」が選ばれている場合にエラーを表示
+  $("form").on("submit", function (e) {
+    var selectedValue = $("select").val();
+    if (selectedValue === "default") {
+      e.preventDefault(); // フォームの送信をキャンセル
+      alert("「選択してください」以外の項目を選んでください。");
+    }
+  });
+
+  // ページリロード時の処理（リセット）
+  window.onpageshow = function (event) {
+    if (event.persisted || event.type === "pageshow") {
+      $("select").val("default"); // 初期値に戻す
+      $(".custom-select-trigger").text("選択してください"); // 初期テキストに戻す
+      $(".custom-options .custom-option").removeClass("selection disabled"); // 選択解除と「選択してください」の有効化
+      $(".custom-select-trigger").css("color", "#CBCBCB"); // 初期テキスト色に戻す
+    }
+  };
+});
+
+// スムーズスクロールの処理
+$('a[href*="#"]').click(function (e) {
+  if ($(this).hasClass("introduction__tab")) {
+    return;
+  }
+  var target = $(this.hash === "" ? "html" : this.hash);
+  if (target.length) {
+    e.preventDefault();
+    var headerHeight = $(".header").outerHeight();
+    var position = target.offset().top - headerHeight - 40;
+    $("html, body").animate({ scrollTop: position }, 500, "swing");
+    if (!target.is("html")) {
+      // URLにハッシュを含める
+      history.pushState(null, "", this.hash);
+    }
+  }
 });
