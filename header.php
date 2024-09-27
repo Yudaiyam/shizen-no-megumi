@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LfiOlAqAAAAAFPGA8pLdB3g7TM9DDPh2WbuRI-O"></script>
     <?php wp_head(); ?>
   </head>
   <body>
