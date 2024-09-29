@@ -8,7 +8,7 @@
         ?>
         <h1 class="section__heading page__heading">お知らせ一覧</h1>
       </div>
-      <div class="tabs-container container">
+      <div class="tabs-container">
         <a href="<?php echo esc_url(home_url('/news')); ?>" class="tab">すべて</a>
         <?php  ?>
         <?php

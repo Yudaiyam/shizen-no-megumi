@@ -1112,22 +1112,30 @@ a {
 .faq__item:before {
   content: "";
   position: absolute;
-  width: 3px;
+  width: 4px;
   height: 20px;
   background-color: #fff;
   top: 50%;
   left: -3px;
   translate: 0 -50%;
+  transition: all 0.3s ease;
 }
 .faq__item:after {
   content: "";
   position: absolute;
-  width: 3px;
+  width: 4px;
   height: 20px;
   background-color: #fff;
   top: 50%;
   right: -3px;
   translate: 0 -50%;
+  transition: all 0.3s ease;
+}
+.faq__item.opened:before {
+  height: 40px;
+}
+.faq__item.opened:after {
+  height: 40px;
 }
 .faq__item.opened .faq__question::after {
   rotate: 0deg;
@@ -1566,7 +1574,7 @@ a {
   overflow-x: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  padding: 0 10px 50px 0;
+  padding: 0 15px 50px 15px;
 }
 .tabs-container::-webkit-scrollbar {
   display: none;
@@ -1976,6 +1984,8 @@ a {
   margin: 0 0 20px 20px;
   width: min(21.2298682284vw, 290px);
   float: right;
+  border-radius: 20px;
+  overflow: hidden;
 }
 @media screen and (max-width: 767px) {
   .single-section__img {

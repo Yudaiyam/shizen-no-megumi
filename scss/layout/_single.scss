@@ -168,6 +168,8 @@
   margin: 0 0 20px 20px;
   width: min(calc((290 / 1366) * 100vw), 290px);
   float: right;
+  border-radius: 20px;
+  overflow: hidden;
   @include mq(sp) {
     width: 100%;
     margin: 0 0 40px;

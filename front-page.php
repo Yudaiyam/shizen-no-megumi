@@ -434,19 +434,6 @@
           <div class="faq__item">
             <button type="button" class="faq__question">
               <span>Q</span>
-              <h3>農園での見学や体験ツアーは行っていますか？</h3>
-            </button>
-            <div class="faq__answer">
-              <span>A</span>
-              <p>
-                はい、農園での見学や体験ツアーを随時開催しています。<br />
-                農場の日常や農作業を親しみやすく説明し、実際に農園での体験を楽しむことができます。
-              </p>
-            </div>
-          </div>
-          <div class="faq__item">
-            <button type="button" class="faq__question">
-              <span>Q</span>
               <h3>オンラインで注文した農産物はどのように配送されますか？</h3>
             </button>
             <div class="faq__answer">

@@ -31,24 +31,32 @@
   &:before {
     content: "";
     position: absolute;
-    width: 3px;
+    width: 4px;
     height: 20px;
     background-color: #fff;
     top: 50%;
     left: -3px;
     translate: 0 -50%;
+    transition: $transition;
   }
   &:after {
     content: "";
     position: absolute;
-    width: 3px;
+    width: 4px;
     height: 20px;
     background-color: #fff;
     top: 50%;
     right: -3px;
     translate: 0 -50%;
+    transition: $transition;
   }
   &.opened {
+    &:before {
+      height: 40px;
+    }
+    &:after {
+      height: 40px;
+    }
     .faq__question::after {
       rotate: 0deg;
     }
