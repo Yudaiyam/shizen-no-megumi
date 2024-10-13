@@ -171,12 +171,6 @@ $(document).ready(function () {
     });
   });
 
-  // ページが読み込まれたときに選択肢をリセット（CSSや内部状態の初期化）
-  // $(".custom-select-trigger").text("選択してください"); // 初期表示を設定
-  // $("select").val("default");
-  // $(".custom-options .custom-option").removeClass("selection");
-  // $(".custom-select-trigger").css("color", "#CBCBCB");
-
   // ドロップダウンメニューの生成
   $(".wpcf7-select").each(function () {
     var template = '<div class="contact-option contact-input">';
