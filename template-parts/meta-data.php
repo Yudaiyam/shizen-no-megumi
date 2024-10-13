@@ -26,3 +26,25 @@
 <title><?php echo $title; ?></title>
 <meta name="description" content="<?php echo $description; ?>" />
 <?php echo $noindex; ?>
+<link rel="canonical" href="<?php echo get_permalink(); ?>">
+<meta property="og:url" content="<?php echo get_permalink(); ?>" />
+<meta property="og:type" content="
+    <?php 
+        if(is_front_page()){
+            echo 'website';
+        }
+        elseif(is_archive()){
+            echo 'blog';
+        }
+        elseif(is_category()){
+            echo 'blog';
+        }
+        else{
+            echo 'article';
+        }
+    ?>
+" />
+<meta property="og:title" content="<?php echo $title; ?>" />
+<meta property="og:description" content="<?php echo $description; ?>" />
+<meta property="og:site_name" content="自然の恵み農園" />
+<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/ogp-image.webp" />
