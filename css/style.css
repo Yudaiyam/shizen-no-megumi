@@ -146,8 +146,7 @@ html {
 }
 
 body {
-  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
-    "游ゴシック", "Yu Gothic", sans-serif;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
   overflow-x: hidden;
   background-color: #f9f9f9;
 }
@@ -295,8 +294,7 @@ a {
   color: #fff;
 }
 .btn-ja {
-  font-family: "Yu Gothic", "Helvetica Neue", "Helvetica", "Hiragino Sans",
-    "Hiragino Kaku Gothic ProN", "Arial", "Meiryo", sans-serif;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
   font-weight: bold;
 }
 
@@ -1169,8 +1167,7 @@ a {
   }
 }
 .faq__question h3 {
-  font-family: "Yu Gothic", "Helvetica Neue", "Helvetica", "Hiragino Sans",
-    "Hiragino Kaku Gothic ProN", "Arial", "Meiryo", sans-serif;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
   font-size: 20px;
   font-weight: bold;
   line-height: 1.5;
@@ -1412,16 +1409,16 @@ a {
     padding-top: 30px;
   }
 }
-.access__table tr:nth-child(n + 1):nth-child(-n + 4) td {
+.access__table tr:nth-child(n+1):nth-child(-n+4) td {
   padding-left: 50px;
 }
 @media screen and (max-width: 767px) {
-  .access__table tr:nth-child(n + 1):nth-child(-n + 4) td {
+  .access__table tr:nth-child(n+1):nth-child(-n+4) td {
     padding-left: 20px;
     padding-top: 24px;
   }
 }
-.access__table tr:nth-child(n + 2):nth-child(-n + 4) th {
+.access__table tr:nth-child(n+2):nth-child(-n+4) th {
   padding-top: 24px;
 }
 .access__table tr:nth-child(4) th {
@@ -1452,6 +1449,7 @@ a {
 .access__table tr:nth-child(5) th a {
   margin-top: 20px;
   text-decoration: underline;
+  font-size: 16px;
 }
 @media screen and (max-width: 767px) {
   .access__table tr:nth-child(5) th a {
@@ -2307,4 +2305,4 @@ a {
   font-size: 12px;
   letter-spacing: 0.05em;
   text-align: center;
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
