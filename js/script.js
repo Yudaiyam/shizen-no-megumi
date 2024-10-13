@@ -222,7 +222,7 @@ $(document).ready(function () {
     //「選択してください」を無効化する
     $(".contact-select span[data-value='default']").addClass("disabled");
   });
-
+});
 // スムーズスクロールの処理
 $('a[href*="#"]').click(function (e) {
   if ($(this).hasClass("introduction__tab")) {
