@@ -104,6 +104,6 @@
           ?>
         </div>
       </section>
-      <?php get_template_part('section-contact'); ?>
+      <?php get_template_part('template-parts/section-contact'); ?>
     </main>
 <?php get_footer(); ?>
