@@ -24,7 +24,6 @@
   add_action( 'init' , 'my_remove_post_support' );
   function my_remove_post_support() {
   remove_post_type_support('post','editor');
-  remove_post_type_support('salons','editor');
   }
 
   // お知らせ投稿のアーカイブページ有効化
