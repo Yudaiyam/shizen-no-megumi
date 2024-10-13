@@ -229,33 +229,6 @@ $(document).ready(function () {
     $(".contact-select span[data-value='default']").addClass("disabled");
   });
 
-  // ページ外クリック時にドロップダウンを閉じる
-  // $(document).on("click", function (e) {
-  //   if (!$(e.target).closest(".custom-select").length) {
-  //     $(".custom-select").removeClass("opened");
-  //   }
-  // });
-
-  // Contact Form 7で「選択してください」が選ばれている場合にエラーを表示
-  // $("form").on("submit", function (e) {
-  //   var selectedValue = $(".contact-select span.selected").data("value");
-  //   if (!selectedValue || selectedValue === "default") {
-  //     e.preventDefault(); // フォームの送信をキャンセル
-  //     alert("「選択してください」以外の項目を選んでください。");
-  //   }
-  // });
-
-  // ページリロード時の処理（リセット）
-  // window.onpageshow = function (event) {
-  //   if (event.persisted || event.type === "pageshow") {
-  //     $("select").val("default"); // 初期値に戻す
-  //     $(".custom-select-trigger").text("選択してください"); // 初期テキストに戻す
-  //     $(".custom-options .custom-option").removeClass("selection disabled"); // 選択解除と「選択してください」の有効化
-  //     $(".custom-select-trigger").css("color", "#CBCBCB"); // 初期テキスト色に戻す
-  //   }
-  // };
-});
-
 // スムーズスクロールの処理
 $('a[href*="#"]').click(function (e) {
   if ($(this).hasClass("introduction__tab")) {
