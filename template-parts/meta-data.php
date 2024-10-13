@@ -26,24 +26,46 @@
 <title><?php echo $title; ?></title>
 <meta name="description" content="<?php echo $description; ?>" />
 <?php echo $noindex; ?>
-<link rel="canonical" href="<?php echo get_permalink(); ?>">
-<meta property="og:url" content="<?php echo get_permalink(); ?>" />
-<meta property="og:type" content="
-    <?php 
-        if(is_front_page()){
-            echo 'website';
-        }
-        elseif(is_archive()){
-            echo 'blog';
-        }
-        elseif(is_category()){
-            echo 'blog';
-        }
-        else{
-            echo 'article';
-        }
-    ?>
-" />
+<link rel="canonical" href="<?php
+    if (is_single()) {
+        echo get_permalink();
+    } elseif (is_page()) {
+        echo get_permalink();
+    } elseif (is_archive()) {
+        echo home_url('news');
+    } elseif (is_category()) {
+        echo get_category_link(get_queried_object_id());
+        }else {
+        echo home_url();
+    }
+    ?>">
+<meta property="og:url" content="<?php
+    if (is_single()) {
+        echo get_permalink();
+    } elseif (is_page()) {
+        echo get_permalink();
+    } elseif (is_archive()) {
+        echo home_url('news');
+    } elseif (is_category()) {
+        echo get_category_link(get_queried_object_id());
+     }else {
+        echo home_url();
+    }
+    ?>" />
+<meta property="og:type" content="<?php 
+    if(is_front_page()){
+        echo 'website';
+    }
+    elseif(is_archive()){
+        echo 'blog';
+    }
+    elseif(is_category()){
+        echo 'blog';
+    }
+    else{
+        echo 'article';
+    }
+    ?>" />
 <meta property="og:title" content="<?php echo $title; ?>" />
 <meta property="og:description" content="<?php echo $description; ?>" />
 <meta property="og:site_name" content="自然の恵み農園" />
